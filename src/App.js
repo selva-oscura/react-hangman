@@ -12,8 +12,8 @@ const App = React.createClass({
         hangman:0,
         player:0,
       },
-      word: undefined,
-      lettersPlayed:[],
+      word: data.words[2],
+      lettersPlayed:["a", "b"],
       wrongLetters: 0,
       message:"start",
     }
