@@ -3,6 +3,7 @@ import './App.css';
 import data from '../public/words.json';
 import Gallows from './Gallows';
 import Header from './Header';
+import Word from './Word';
 
 const App = React.createClass({
   getInitialState(){
@@ -26,6 +27,10 @@ const App = React.createClass({
         />
         <Gallows 
           wrongLetters={this.state.wrongLetters}
+        />
+        <Word 
+          word={this.state.word}
+          lettersPlayed={this.state.lettersPlayed}
         />
       </div>
     );
