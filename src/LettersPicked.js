@@ -1,8 +1,9 @@
 import React from 'react';
+import './LettersPicked.css';
 
 const LettersPicked = ({lettersPicked}) => (
 	<div className="lettersPicked">
-		<p>{lettersPicked.join(", ")}</p>
+		<h4>Letters Picked: {lettersPicked.map((letter) => letter.toUpperCase()).join(", ")}</h4>
 	</div>
 );
 
