@@ -8,4 +8,4 @@ const Gallows = ({wrongLetters}) => {
 	)
 }
 
-module.exports = Gallows;
+export default Gallows;
