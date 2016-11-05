@@ -7,13 +7,13 @@ const Header = ({scores}) => (
     <h3>But Watch Out for the Hangman</h3>
     <div className="left">
     	<h4>
-    		Hanged:<br />
+    		Hanged<br />
     		{scores.hangman}
     	</h4>
     </div>
     <div className="right">
     	<h4>
-    		Saved:<br />
+    		Saved<br />
     		{scores.player}
     	</h4>
     </div>
