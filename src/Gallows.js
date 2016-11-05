@@ -1,4 +1,5 @@
 import React from 'react';
+import './Gallows.css';
 
 const Gallows = ({wrongLetters}) => {
 	return (
