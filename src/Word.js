@@ -1,4 +1,5 @@
 import React from 'react';
+import './Word.css';
 
 const Word = ({word, lettersPlayed}) => {
 	return(
