@@ -1,10 +1,10 @@
 import React from 'react';
 import './Letter.css';
 
-const Letter = ({letter, i, lettersPlayed, wordLength}) => {
+const Letter = ({letter, i, lettersPicked, wordLength}) => {
 	let displayedLetter;
 	let color = Math.floor((i/wordLength)*360);
-	if(lettersPlayed.indexOf(letter)>=0){
+	if(lettersPicked.indexOf(letter)>=0){
 		displayedLetter = letter;
 	}else{
 		displayedLetter = " ";
