@@ -1,0 +1,22 @@
+.lettersPicked{
+  background-color: #FFFFCC;
+  height: 6vh;
+  padding: 2vh;
+  text-align: left;
+}
+.lettersPicked h4{
+  font-size: 2vh;
+}
+
+@media (orientation: landscape){
+  .lettersPicked{
+    float:right;
+    width: 50vw;
+  }
+}
+
+@media (orientation: portrait){
+  .lettersPicked{
+    width: 100vw;
+  }
+}
