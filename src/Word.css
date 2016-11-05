@@ -1,0 +1,22 @@
+.word{
+  background-color: #C3FDB8;
+  height: 9vh;
+}
+@media (max-width: 560px){
+  .word p{
+    font-size: 1.7vh;
+  }
+}
+
+@media (orientation: landscape){
+  .word{
+    float:right;
+    width: 50vw;
+  }
+}
+
+@media (orientation: portrait){
+  .word{
+    width: 100vw;
+  }
+}
