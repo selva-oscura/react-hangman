@@ -1,8 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import data from '../public/words.json';
 
-class App extends Component {
+const App = React.createClass({
+  getInitialState(){
+    return {
+      scores:{
+        hangman:0,
+        player:0,
+      },
+      word: undefined,
+      lettersPlayed:[],
+      wrongLetters: 0,
+      message:"start",
+      errorMessage: undefined,
+    }
+  },
   render() {
     console.log("words", data.words);
     return (
@@ -14,8 +27,6 @@ class App extends Component {
       </div>
     );
   }
-}
+});
 
 export default App;
-
-
