@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+import data from '../public/words.json';
 
 class App extends Component {
   render() {
+    console.log("words", data.words);
     return (
       <div className="App">
         <h2>The Pen is Mightier than the Sword</h2>
@@ -15,3 +17,5 @@ class App extends Component {
 }
 
 export default App;
+
+
