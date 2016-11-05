@@ -1,0 +1,17 @@
+.gallows{
+  background-color: aliceblue;
+}
+@media (orientation: landscape){
+  .gallows{
+    float:left;
+    height: 100vh;
+    width: 50vw;
+  }
+}
+
+@media (orientation: portrait){
+  .gallows{
+    height: 50vh;
+    width: 100vw;
+  }
+}
