@@ -1,5 +1,6 @@
 .header{
   background-color: #FCDFFF;
+  width: 100vw;
   height: 18vh;
 }
 
@@ -36,7 +37,7 @@
   }
 }
 
-@media (orientation: landscape){
+/*@media (orientation: landscape){
   .header{
     float:right;
     width: 50vw;
@@ -45,6 +46,5 @@
 
 @media (orientation: portrait){
   .header{
-    width: 100vw;
   }
-}
+}*/
