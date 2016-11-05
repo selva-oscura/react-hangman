@@ -1,7 +1,9 @@
 .word{
   background-color: #C3FDB8;
   height: 9vh;
+  padding-top: 2vh;
 }
+
 @media (max-width: 560px){
   .word p{
     font-size: 1.7vh;
