@@ -1,0 +1,24 @@
+.letterForm{
+  background-color: #EECCFF;
+  height: 9vh;
+  padding-top: 2vh;
+}
+
+@media (max-width: 560px){
+  .letterForm p{
+    font-size: 1.7vh;
+  }
+}
+
+@media (orientation: landscape){
+  .letterForm{
+    float:right;
+    width: 50vw;
+  }
+}
+
+@media (orientation: portrait){
+  .letterForm{
+    width: 100vw;
+  }
+}

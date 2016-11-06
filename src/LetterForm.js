@@ -1,4 +1,5 @@
 import React from 'react';
+import './LetterForm.css';
 
 const LetterForm = ({newLetter}) => (
 	<div className="letterForm">
