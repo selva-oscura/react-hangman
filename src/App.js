@@ -24,14 +24,24 @@ const App = React.createClass({
   },
   newLetter(letter){
     let state = this.state;
-    state.lettersPicked.push(letter);
-    if(state.word.indexOf(letter)<0){
-      state.wrongLetters += 1;
+    letter = letter.toLowerCase();
+    if(letter.charCodeAt(0)>122 || letter.charCodeAt(0)<97){
+      state.message="letters-only";
+    }else if(state.lettersPicked.indexOf(letter)>=0){
+      state.message="already-picked";
+    }else{
+      state.lettersPicked.push(letter);
+      if(state.word.indexOf(letter)<0){
+        state.wrongLetters += 1;
+        state.message="wrong-pick-again";
+      }else{
+        state.message="pick-letter";
+      }
     }
     this.setState(state);
+    console.log('state after change',this.state.message);
   },
   render() {
-    console.log('words', data.words);
     return (
       <div className="App">
         <Header 
@@ -56,4 +66,3 @@ const App = React.createClass({
 });
 
 export default App;
-
