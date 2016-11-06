@@ -5,6 +5,7 @@ import Gallows from './Gallows';
 import Header from './Header';
 import LettersPicked from './LettersPicked';
 import Word from './Word';
+import Message from './Message';
 import LetterForm from './LetterForm';
 
 const App = React.createClass({
@@ -56,6 +57,9 @@ const App = React.createClass({
         <Word 
           word={this.state.word}
           lettersPicked={this.state.lettersPicked}
+        />
+        <Message 
+          message={this.state.message} 
         />
         <LetterForm 
           newLetter={this.newLetter}
