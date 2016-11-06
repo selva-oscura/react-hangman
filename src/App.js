@@ -7,16 +7,16 @@ import LettersPicked from './LettersPicked';
 import Word from './Word';
 import LetterForm from './LetterForm';
 
-
 const App = React.createClass({
   getInitialState(){
+    const randomWord = Math.floor(Math.random()*data.words.length);
+    console.log(data.words[randomWord]);
     return {
       scores:{
         hangman:0,
         player:0,
       },
-      // word: undefined,
-      word: data.words[2],
+      word: data.words[randomWord],
       lettersPicked:[],
       wrongLetters: 0,
       message:"start",
