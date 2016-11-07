@@ -1,0 +1,25 @@
+.interactions{
+  background-color: #C3FDB8;
+  height: 9vh;
+  padding-top: 1vh;
+  vertical-align: bottom;
+}
+
+@media (max-width: 560px){
+  .interactions p{
+    font-size: 1.7vh;
+  }
+}
+
+@media (orientation: landscape){
+  .interactions{
+    float:right;
+    width: 50vw;
+  }
+}
+
+@media (orientation: portrait){
+  .interactions{
+    width: 100vw;
+  }
+}
