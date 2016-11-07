@@ -5,8 +5,7 @@ import Gallows from './Gallows';
 import Header from './Header';
 import LettersPicked from './LettersPicked';
 import Word from './Word';
-import Message from './Message';
-import LetterForm from './LetterForm';
+import Interactions from './Interactions';
 
 const App = React.createClass({
   getInitialState(){
@@ -21,11 +20,13 @@ const App = React.createClass({
       lettersPicked:[],
       wrongLetters: 0,
       message:"start",
+      defaultLetter: "",
     }
   },
   newLetter(letter){
     let state = this.state;
     letter = letter.toLowerCase();
+    state.defaultLetter = letter;
     if(letter.charCodeAt(0)>122 || letter.charCodeAt(0)<97){
       state.message="letters-only";
     }else if(state.lettersPicked.indexOf(letter)>=0){
@@ -40,7 +41,10 @@ const App = React.createClass({
       }
     }
     this.setState(state);
-    console.log('state after change',this.state.message);
+    setTimeout(() => {
+      state.defaultLetter = "";
+      this.setState(state);
+    }, 500)
   },
   render() {
     return (
@@ -58,10 +62,9 @@ const App = React.createClass({
           word={this.state.word}
           lettersPicked={this.state.lettersPicked}
         />
-        <Message 
-          message={this.state.message} 
-        />
-        <LetterForm 
+        <Interactions 
+          message={this.state.message}
+          defaultLetter={this.state.defaultLetter}
           newLetter={this.newLetter}
         />
       </div>
