@@ -21,6 +21,8 @@ const App = React.createClass({
       wrongLetters: 0,
       message:"start",
       defaultLetter: "",
+      maxWrong: 6,
+      displayLetterForm: true,
     }
   },
   newLetter(letter){
@@ -41,10 +43,34 @@ const App = React.createClass({
       }
     }
     this.setState(state);
+    this.checkGameOver();
     setTimeout(() => {
       state.defaultLetter = "";
       this.setState(state);
     }, 500)
+  },
+  checkGameOver(){
+    let state = this.state;
+    if(state.wrongLetters===state.maxWrong){
+      state.message = 'game-lost';
+      state.lettersPicked = [];
+      state.word.split('').forEach((letter)=>{
+        state.lettersPicked.push(letter);
+      });
+      state.displayLetterForm = false;
+    }else{
+      let wordGuessed = true;
+      state.word.split("").forEach((letter) => {
+        if(!state.lettersPicked.includes(letter)){
+          wordGuessed = false;
+        }
+      });
+      if(wordGuessed){
+        state.message = 'game-won';
+        state.displayLetterForm = false;
+      }
+    }
+    this.setState(state);
   },
   render() {
     return (
@@ -66,6 +92,7 @@ const App = React.createClass({
           message={this.state.message}
           defaultLetter={this.state.defaultLetter}
           newLetter={this.newLetter}
+          displayLetterForm={this.state.displayLetterForm}
         />
       </div>
     );
