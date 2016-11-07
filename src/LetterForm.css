@@ -11,6 +11,7 @@
   padding: .5vh;
   font-size: 2vh;
   text-align: center;
+  text-transform: capitalize;
 }
 
 @media (orientation: landscape){
