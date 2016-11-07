@@ -11,7 +11,7 @@ const Letter = ({letter, i, lettersPicked, wordLength}) => {
 	}
 	return (
 		<div className="letter" style={{color: `hsl(${color}, 100%, 66%)`, borderBottom: `4px solid hsl(${color}, 100%, 66%)`}} >
-			<h4>{displayedLetter.toUpperCase()}</h4>
+			<h4>{displayedLetter}</h4>
 		</div>
 	)
 };
