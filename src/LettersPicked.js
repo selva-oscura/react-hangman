@@ -3,7 +3,7 @@ import './LettersPicked.css';
 
 const LettersPicked = ({lettersPicked}) => (
 	<div className="lettersPicked">
-		<h4>Letters Picked: {lettersPicked.map((letter) => letter.toUpperCase()).join(", ")}</h4>
+		<h4>Letters Picked: {lettersPicked.map((letter) => letter).join(", ")}</h4>
 	</div>
 );
 

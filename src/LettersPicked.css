@@ -3,14 +3,15 @@
   height: 6vh;
   padding: 2vh;
   text-align: left;
+  float:right;
 }
 .lettersPicked h4{
   font-size: 2vh;
+  text-transform: capitalize;
 }
 
 @media (orientation: landscape){
   .lettersPicked{
-    float:right;
     width: 50vw;
   }
 }
