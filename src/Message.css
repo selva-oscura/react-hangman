@@ -2,6 +2,8 @@
   background-color: #C3FDB8;
   height: 9vh;
   padding-top: 2vh;
+  vertical-align: bottom;
+  float:left;
 }
 
 @media (max-width: 560px){
@@ -12,13 +14,12 @@
 
 @media (orientation: landscape){
   .message{
-    float:right;
-    width: 50vw;
+    width: 40vw;
   }
 }
 
 @media (orientation: portrait){
   .message{
-    width: 100vw;
+    width: 80vw;
   }
 }

@@ -2,23 +2,26 @@
   background-color: #EECCFF;
   height: 9vh;
   padding-top: 2vh;
+  vertical-align: bottom;
 }
 
-@media (max-width: 560px){
-  .letterForm p{
-    font-size: 1.7vh;
-  }
+.letterForm input{
+  width: 3vh;
+  height: 3vh;
+  padding: .5vh;
+  font-size: 2vh;
+  text-align: center;
 }
 
 @media (orientation: landscape){
   .letterForm{
     float:right;
-    width: 50vw;
+    width: 10vw;
   }
 }
 
 @media (orientation: portrait){
   .letterForm{
-    width: 100vw;
+    width: 20vw;
   }
 }
