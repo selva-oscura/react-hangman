@@ -1,15 +1,14 @@
 .message{
   background-color: #C3FDB8;
   height: 9vh;
-  padding-top: 2vh;
-  vertical-align: bottom;
+  padding: 2vh;
   float:left;
+  text-align: left;
 }
 
-@media (max-width: 560px){
-  .message p{
-    font-size: 1.7vh;
-  }
+.message h4{
+  font-size: 2vh;
+  text-transform: capitalize;
 }
 
 @media (orientation: landscape){
