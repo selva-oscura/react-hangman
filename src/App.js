@@ -53,10 +53,6 @@ const App = React.createClass({
     let state = this.state;
     if(state.wrongLetters===state.maxWrong){
       state.message = 'game-lost';
-      state.lettersPicked = [];
-      state.word.split('').forEach((letter)=>{
-        state.lettersPicked.push(letter);
-      });
       state.displayLetterForm = false;
     }else{
       let wordGuessed = true;
@@ -70,6 +66,17 @@ const App = React.createClass({
         state.displayLetterForm = false;
       }
     }
+    this.setState(state);
+  },
+  newGame(){
+    let state = this.state;
+    const randomWord = Math.floor(Math.random()*data.words.length);
+    console.log(data.words[randomWord]);
+    state.word = data.words[randomWord];
+    state.lettersPicked = [];
+    state.message = "pick-letter";
+    state.displayLetterForm = true;
+    state.wrongLetters = 0;
     this.setState(state);
   },
   render() {
@@ -93,6 +100,7 @@ const App = React.createClass({
           defaultLetter={this.state.defaultLetter}
           newLetter={this.newLetter}
           displayLetterForm={this.state.displayLetterForm}
+          newGame={this.newGame}
         />
       </div>
     );
