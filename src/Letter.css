@@ -17,7 +17,7 @@
 @media (orientation: portrait){
   .letter{
     height: 3.5vh;
-    width: 4vw;
-    margin: 2vw;
+    width: 6vw;
+    margin: 1.5vw;
   }
 }
