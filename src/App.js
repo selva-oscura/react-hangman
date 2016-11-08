@@ -19,7 +19,7 @@ const App = React.createClass({
       word: data.words[randomWord],
       lettersPicked:[],
       wrongLetters: 0,
-      message:"start",
+      message:"pick-letter",
       defaultLetter: "",
       maxWrong: 6,
       displayLetterForm: true,
