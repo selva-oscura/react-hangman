@@ -1,0 +1,18 @@
+.newGame{
+  background-color: #EECCFF;
+  height: 9vh;
+  padding-top: 2vh;
+}
+
+@media (orientation: landscape){
+  .newGame{
+    float:right;
+    width: 10vw;
+  }
+}
+
+@media (orientation: portrait){
+  .newGame{
+    width: 20vw;
+  }
+}

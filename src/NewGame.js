@@ -1,4 +1,5 @@
 import React from 'react';
+import './NewGame.css';
 
 const NewGame = ({newGame}) => (
 	<div className="newGame">
