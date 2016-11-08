@@ -85,10 +85,10 @@ const App = React.createClass({
     return (
       <div className="App">
         <Header 
+          scores={this.state.scores}
         />
         <Gallows 
           wrongLetters={this.state.wrongLetters}
-          scores={this.state.scores}
         />
         <LettersPicked  
           lettersPicked={this.state.lettersPicked}

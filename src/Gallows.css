@@ -1,17 +1,6 @@
 .gallows{
   background-color: aliceblue;
-  padding:2vh;
 }
-
-.left{
-  float:left;
-  text-align: left;
-}
-.right{
-  float:right;
-  text-align:right;
-}
-
 @media (orientation: landscape){
   .gallows{
     float:left;

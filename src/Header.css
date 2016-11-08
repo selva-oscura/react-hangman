@@ -2,6 +2,7 @@
   background-color: #FCDFFF;
   width: 100vw;
   padding: 2vh;
+  height: 18vh;
 }
 
 .header h2{
@@ -17,6 +18,15 @@
 .header h4{
   font-size: 2vh;
   padding:0vh 1vh 1vh 1vh;
+}
+
+.left{
+  float:left;
+  text-align: left;
+}
+.right{
+  float:right;
+  text-align:right;
 }
 
 @media (max-width: 560px){
