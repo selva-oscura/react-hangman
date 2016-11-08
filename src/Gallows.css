@@ -1,5 +1,5 @@
 .gallows{
-  background-color: aliceblue;
+  background-color: black;
 }
 @media (orientation: landscape){
   .gallows{
@@ -7,10 +7,18 @@
     height: 82vh;
     width: 50vw;
   }
+  svg {
+    height: 82vh;
+    width: 50vw;
+  }
 }
 
 @media (orientation: portrait){
   .gallows{
+    height: 50vh;
+    width: 100vw;
+  }
+  svg{
     height: 50vh;
     width: 100vw;
   }
