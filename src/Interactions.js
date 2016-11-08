@@ -1,16 +1,31 @@
 import React from 'react';
 import './Interactions.css';
-import Message from './Message.js';
-import LetterForm from './LetterForm.js';
+import Message from './Message';
+import LetterForm from './LetterForm';
+import NewGame from './NewGame';
 
-const Interactions = ({message, defaultLetter, newLetter}) => (
-	<div className="interactions">
-		<Message message={message} />
-		<LetterForm 
-			defaultLetter={defaultLetter}
-			newLetter={newLetter}
-		/>
-	</div>
-);
+const Interactions = ({message, defaultLetter, newLetter, displayLetterForm, newGame}) => {
+	let userResponse;
+	if(displayLetterForm){
+		userResponse = (
+			<LetterForm 
+				defaultLetter={defaultLetter}
+				newLetter={newLetter}
+			/>
+		);
+	}else{
+		userResponse = (
+			<NewGame 
+				newGame={newGame}
+			/>
+		)
+	}
+	return(
+		<div className="interactions">
+			<Message message={message} />
+			{userResponse}
+		</div>
+	)
+};
 
 export default Interactions;
