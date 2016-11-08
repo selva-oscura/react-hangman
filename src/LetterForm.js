@@ -10,7 +10,13 @@ const LetterForm = ({defaultLetter, newLetter}) => (
 			autoFocus
 			onChange={(e)=>{
 				let inputValue = e.nativeEvent.target.value;
-				newLetter(inputValue.toLowerCase());
+				if(inputValue.length===1){
+					newLetter(inputValue.toLowerCase());
+				}else{
+					inputValue = inputValue[inputValue.length-1];
+					newLetter(inputValue.toLowerCase());
+					e.nativeEvent.target.value = inputValue;
+				}
 			}}
 		/>
 	</div>
