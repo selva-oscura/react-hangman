@@ -19,7 +19,7 @@ const App = React.createClass({
       word: data.words[randomWord],
       lettersPicked:[],
       wrongLetters: 0,
-      message:"pick-letter",
+      message:"start",
       defaultLetter: "",
       maxWrong: 6,
       displayLetterForm: true,
@@ -76,7 +76,7 @@ const App = React.createClass({
     console.log(data.words[randomWord]);
     state.word = data.words[randomWord];
     state.lettersPicked = [];
-    state.message = "pick-letter";
+    state.message = "start";
     state.displayLetterForm = true;
     state.wrongLetters = 0;
     this.setState(state);
@@ -85,10 +85,10 @@ const App = React.createClass({
     return (
       <div className="App">
         <Header 
-          scores={this.state.scores}
         />
         <Gallows 
           wrongLetters={this.state.wrongLetters}
+          scores={this.state.scores}
         />
         <LettersPicked  
           lettersPicked={this.state.lettersPicked}
@@ -99,6 +99,7 @@ const App = React.createClass({
         />
         <Interactions 
           message={this.state.message}
+          word={this.state.word}
           defaultLetter={this.state.defaultLetter}
           newLetter={this.newLetter}
           displayLetterForm={this.state.displayLetterForm}
