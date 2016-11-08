@@ -53,6 +53,7 @@ const App = React.createClass({
     let state = this.state;
     if(state.wrongLetters===state.maxWrong){
       state.message = 'game-lost';
+      state.scores.hangman +=1;
       state.displayLetterForm = false;
     }else{
       let wordGuessed = true;
@@ -63,6 +64,7 @@ const App = React.createClass({
       });
       if(wordGuessed){
         state.message = 'game-won';
+        state.scores.player +=1;
         state.displayLetterForm = false;
       }
     }
