@@ -4,7 +4,7 @@ import Message from './Message';
 import LetterForm from './LetterForm';
 import NewGame from './NewGame';
 
-const Interactions = ({message, defaultLetter, newLetter, displayLetterForm, newGame}) => {
+const Interactions = ({message, word, defaultLetter, newLetter, displayLetterForm, newGame}) => {
 	let userResponse;
 	if(displayLetterForm){
 		userResponse = (
@@ -22,7 +22,10 @@ const Interactions = ({message, defaultLetter, newLetter, displayLetterForm, new
 	}
 	return(
 		<div className="interactions">
-			<Message message={message} />
+			<Message 
+				message={message} 
+				word={word}
+			/>
 			{userResponse}
 		</div>
 	)

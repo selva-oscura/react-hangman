@@ -1,7 +1,7 @@
 import React from 'react';
 import './Message.css';
 
-const Message = ({message}) => {
+const Message = ({message, word}) => {
 	switch(message){
 		case 'start':
 			message = <h4>Please pick a letter.</h4>;
@@ -19,7 +19,7 @@ const Message = ({message}) => {
 			message = <h4>Eep! That letter isn&lsquo;t in the word.  Please pick a new letter.</h4>;
 			break;
 		case 'game-lost':
-			message = <h4>Erk... That letter wasn't in the word.  Game over.<br />New Game?</h4>;
+			message = <h4>Erk... That letter wasn't in the word.<br />Game over.  The word was {word}. New Game?</h4>;
 			break;
 		case 'game-won':
 			message = <h4>Congratulations! You won!<br />New Game?</h4>;
