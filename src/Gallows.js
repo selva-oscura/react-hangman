@@ -4,6 +4,13 @@ import './Gallows.css';
 const Gallows = ({wrongLetters}) => {
 	let hangedMan;
 	switch(wrongLetters){
+		case 1:
+			hangedMan = (
+				<g>
+					<circle cx="59.5%" cy="25%" r="8%" stroke="red" strokeWidth="6" />					
+				</g>
+			);
+			break;
 		default:
 			hangedMan = (
 				<g>
