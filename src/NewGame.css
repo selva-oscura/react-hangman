@@ -1,8 +1,21 @@
 .newGame{
-  background-color: #EECCFF;
-  /*height: 9vh;*/
   padding-top: 2vh;
 }
+.newGame button{
+  background-color:transparent;
+  color: #eeeeee;
+  padding:1.5vh;
+  font-size: 1.5vh;
+  margin-right: 2vh;
+  border:1px solid white;
+  box-shadow: 0vh .5vh .5vh silver;
+  transition: all 1s;
+}
+.newGame button:hover{
+  background-color:#333333;
+  box-shadow: 0vh .5vh .5vh grey;
+}
+
 
 @media (orientation: landscape){
   .newGame{
