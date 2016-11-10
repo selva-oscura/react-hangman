@@ -89,6 +89,7 @@ const App = React.createClass({
         />
         <Gallows 
           wrongLetters={this.state.wrongLetters}
+          message={this.state.message}
         />
         <LettersPicked  
           lettersPicked={this.state.lettersPicked}
