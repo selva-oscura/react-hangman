@@ -38,6 +38,29 @@ const Gallows = ({wrongLetters}) => {
 				</g>
 			);
 			break;
+		case 5:
+			hangedMan = (
+				<g>
+					<line x1="59%" y1="68%" x2="50%" y2="90%" stroke="green" strokeWidth="6" />
+					<line x1="59.5%" y1="47%" x2="69%" y2="47%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="47%" x2="50%" y2="47%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="33%" x2="59%" y2="68%" stroke="yellow" strokeWidth="6" />
+					<circle cx="59.5%" cy="25%" r="8%" stroke="red" strokeWidth="6" />					
+				</g>
+			);
+			break;
+		case 6:
+			hangedMan = (
+				<g>
+					<line x1="59%" y1="68%" x2="69%" y2="90%" stroke="green" strokeWidth="6" />
+					<line x1="59%" y1="68%" x2="50%" y2="90%" stroke="green" strokeWidth="6" />
+					<line x1="59.5%" y1="47%" x2="69%" y2="47%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="47%" x2="50%" y2="47%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="33%" x2="59%" y2="68%" stroke="yellow" strokeWidth="6" />
+					<circle cx="59.5%" cy="25%" r="8%" stroke="red" strokeWidth="6" />					
+				</g>
+			);
+			break;
 		default:
 			hangedMan = (
 				<g>
