@@ -3,7 +3,13 @@ import './Gallows.css';
 
 const Gallows = ({wrongLetters}) => {
 	let hangedMan;
-
+	switch(wrongLetters){
+		default:
+			hangedMan = (
+				<g>
+				</g>
+			);
+	}
 	return (
 		<div className="gallows">
 			<svg xmlns="http://www.w3.org/svg/2000">
