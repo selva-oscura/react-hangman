@@ -3,6 +3,7 @@ import './LetterForm.css';
 
 const LetterForm = ({defaultLetter, newLetter}) => (
 	<div className="letterForm">
+		<label htmlFor="nextLetter">Next Letter</label>
 		<input 
 			name="nextLetter" 
 			type="text" 

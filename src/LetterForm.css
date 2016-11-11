@@ -2,6 +2,10 @@
   padding-top: 2vh;
 }
 
+.letterForm label{
+  color:transparent;
+}
+
 .letterForm input{
   width: 3vh;
   height: 3vh;
