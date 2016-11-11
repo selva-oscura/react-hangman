@@ -9,20 +9,30 @@ import Interactions from './Interactions';
 
 const App = React.createClass({
   getInitialState(){
-    const randomWord = Math.floor(Math.random()*data.words.length);
-    console.log(data.words[randomWord]);
-    return {
-      scores:{
-        hangman:0,
-        player:0,
-      },
-      word: data.words[randomWord],
-      lettersPicked:[],
-      wrongLetters: 0,
-      message:"start",
-      defaultLetter: "",
-      maxWrong: 6,
-      displayLetterForm: true,
+    let local = localStorage;
+    console.log('localStorage', local);
+    let hangmanAppData = localStorage.hangmanAppData;
+    console.log('hangmanAppData present?', hangmanAppData);
+    if(hangmanAppData){
+      hangmanAppData = JSON.parse(hangmanAppData);
+      console.log('hangmanAppData post parsing', hangmanAppData)
+      return hangmanAppData;
+    }else{    
+      const randomWord = Math.floor(Math.random()*data.words.length);
+      // console.log(data.words[randomWord]);
+      return {
+        scores:{
+          hangman:0,
+          player:0,
+        },
+        word: data.words[randomWord],
+        lettersPicked:[],
+        wrongLetters: 0,
+        message:"start",
+        defaultLetter: "",
+        maxWrong: 6,
+        displayLetterForm: true,
+      }
     }
   },
   newLetter(letter){
@@ -43,6 +53,10 @@ const App = React.createClass({
       }
     }
     this.setState(state);
+    let data = state;
+    data.defaultLetter = "";
+    let hangmanAppData = JSON.stringify(data);
+    localStorage.hangmanAppData = hangmanAppData;
     this.checkGameOver();
     setTimeout(() => {
       state.defaultLetter = "";
@@ -69,17 +83,21 @@ const App = React.createClass({
       }
     }
     this.setState(state);
+    let hangmanAppData = JSON.stringify(state);
+    localStorage.hangmanAppData = hangmanAppData;
   },
   newGame(){
     let state = this.state;
     const randomWord = Math.floor(Math.random()*data.words.length);
-    console.log(data.words[randomWord]);
+    // console.log(data.words[randomWord]);
     state.word = data.words[randomWord];
     state.lettersPicked = [];
     state.message = "start";
     state.displayLetterForm = true;
     state.wrongLetters = 0;
     this.setState(state);
+    let hangmanAppData = JSON.stringify(state);
+    localStorage.hangmanAppData = hangmanAppData;
   },
   render() {
     return (
