@@ -15,11 +15,11 @@
 
 @media (orientation: portrait){
   .gallows{
-    height: 50vh;
+    height: 38vh;
     width: 100vw;
   }
   svg{
-    height: 50vh;
+    height: 38vh;
     width: 100vw;
   }
 }
