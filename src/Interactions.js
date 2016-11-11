@@ -1,16 +1,17 @@
 import React from 'react';
 import './Interactions.css';
 import Message from './Message';
-import LetterForm from './LetterForm';
+import LettersSelection from './LettersSelection';
 import NewGame from './NewGame';
 
-const Interactions = ({message, word, defaultLetter, newLetter, displayLetterForm, newGame}) => {
+
+const Interactions = ({message, word, lastPicked, availableLetters, selectLetter, displayLetterForm, newGame}) => {
 	let userResponse;
 	if(displayLetterForm){
 		userResponse = (
-			<LetterForm 
-				defaultLetter={defaultLetter}
-				newLetter={newLetter}
+			<LettersSelection 
+				availableLetters={availableLetters}
+				selectLetter={selectLetter}
 			/>
 		);
 	}else{
@@ -25,6 +26,7 @@ const Interactions = ({message, word, defaultLetter, newLetter, displayLetterFor
 			<Message 
 				message={message} 
 				word={word}
+				lastPicked={lastPicked}
 			/>
 			{userResponse}
 		</div>
