@@ -9,13 +9,13 @@ import Interactions from './Interactions';
 
 const App = React.createClass({
   getInitialState(){
-    let local = localStorage;
-    console.log('localStorage', local);
+    // let local = localStorage;
+    // console.log('localStorage', local);
     let hangmanAppData = localStorage.hangmanAppData;
-    console.log('hangmanAppData present?', hangmanAppData);
+    // console.log('hangmanAppData present?', hangmanAppData);
     if(hangmanAppData){
       hangmanAppData = JSON.parse(hangmanAppData);
-      console.log('hangmanAppData post parsing', hangmanAppData)
+      // console.log('hangmanAppData post parsing', hangmanAppData);
       return hangmanAppData;
     }else{    
       const randomWord = Math.floor(Math.random()*data.words.length);
