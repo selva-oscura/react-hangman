@@ -19,6 +19,14 @@ const App = React.createClass({
       return hangmanAppData;
     }else{    
       const randomWord = Math.floor(Math.random()*data.words.length);
+      let letters = [];
+      for(let i = 97; i<=122; i++){
+        letters.push({
+          index: i-97,
+          letter: String.fromCharCode(i),
+          available: true
+        });
+      }
       // console.log(data.words[randomWord]);
       return {
         scores:{
@@ -26,26 +34,26 @@ const App = React.createClass({
           player:0,
         },
         word: data.words[randomWord],
-        lettersPicked:[],
+        availableLetters: letters,
+        lettersPicked: [],
+        lastPicked: "",
         wrongLetters: 0,
         message:"start",
-        defaultLetter: "",
         maxWrong: 6,
         displayLetterForm: true,
       }
     }
   },
-  newLetter(letter){
+  selectLetter(letter){
+    console.log('letter', letter);
     let state = this.state;
-    letter = letter.toLowerCase();
-    state.defaultLetter = letter;
-    if(letter.charCodeAt(0)>122 || letter.charCodeAt(0)<97){
-      state.message="letters-only";
-    }else if(state.lettersPicked.indexOf(letter)>=0){
+    state.lastPicked=letter.letter;
+    if(!letter.available){
       state.message="already-picked";
     }else{
-      state.lettersPicked.push(letter);
-      if(state.word.indexOf(letter)<0){
+      state.lettersPicked.push(letter.letter);
+      state.availableLetters[letter.index].available = false;
+      if(state.word.indexOf(letter.letter)<0){
         state.wrongLetters += 1;
         state.message="wrong-pick-again";
       }else{
@@ -54,14 +62,9 @@ const App = React.createClass({
     }
     this.setState(state);
     let data = state;
-    data.defaultLetter = "";
     let hangmanAppData = JSON.stringify(data);
     localStorage.hangmanAppData = hangmanAppData;
     this.checkGameOver();
-    setTimeout(() => {
-      state.defaultLetter = "";
-      this.setState(state);
-    }, 500)
   },
   checkGameOver(){
     let state = this.state;
@@ -88,6 +91,14 @@ const App = React.createClass({
   },
   newGame(){
     let state = this.state;
+    let letters = [];
+    for(let i = 97; i<=122; i++){
+      letters.push({
+        index: i-97,
+        letter: String.fromCharCode(i),
+        available: true
+      });
+    }
     const randomWord = Math.floor(Math.random()*data.words.length);
     // console.log(data.words[randomWord]);
     state.word = data.words[randomWord];
@@ -95,6 +106,9 @@ const App = React.createClass({
     state.message = "start";
     state.displayLetterForm = true;
     state.wrongLetters = 0;
+    state.lastPicked = "";
+    state.availableLetters=letters;
+    console.log('state from newGame', state);
     this.setState(state);
     let hangmanAppData = JSON.stringify(state);
     localStorage.hangmanAppData = hangmanAppData;
@@ -119,8 +133,10 @@ const App = React.createClass({
         <Interactions 
           message={this.state.message}
           word={this.state.word}
-          defaultLetter={this.state.defaultLetter}
-          newLetter={this.newLetter}
+          lastPicked={this.state.lastPicked}
+          lettersPicked={this.lettersPicked}
+          availableLetters={this.state.availableLetters}
+          selectLetter={this.selectLetter}
           displayLetterForm={this.state.displayLetterForm}
           newGame={this.newGame}
         />
