@@ -1,15 +1,19 @@
-var cacheName = 'hangman-v1';
-var filesToCache = [
-	'/',
-	'/public/index.html',
-	'/public/favicon.ico',
-	'/public/hangman-128x128.png',
-	'/public/hangman-144x144.png',
-	'/public/hangman-152x152.png',
-	'/public/hangman-192x192.png',
-	'/public/hangman-256x256.png',
-	'/public/words.json'
+// const VERSION = 1;
+
+const filesToCache = [
+	'./',
+	'./index.html',
+	'./favicon.ico',
+	'./hangman-128x128.png',
+	'./hangman-144x144.png',
+	'./hangman-152x152.png',
+	'./hangman-192x192.png',
+	'./hangman-256x256.png',
+	'./words.json'
 ];
+
+var dataCacheName = 'hangman-appData-v1';
+var cacheName = 'hangman-v1';
 
 self.addEventListener('install', function(e){
 	console.log('[ServiceWorker] install');
@@ -23,5 +27,15 @@ self.addEventListener('install', function(e){
 
 self.addEventListener('activate', function(e){
 	console.log('[ServiceWorker] Activate');
+	e.waitUntil(
+		caches.keys().then(function(keyList){
+			return Promise.all(keyList.map(function(key){
+				if(key !== changeName && key !== dataCacheName){
+					console.log('[ServiceWorker] Removing old cache', key);
+					return caches.delete(key);
+				}
+			}));
+		})
+	);
+	return self.clients.claim();
 });
-	
