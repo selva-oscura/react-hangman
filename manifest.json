@@ -1,6 +1,6 @@
 {
   "short_name": "Hangman",
-  "name": "Hangman with React.js",
+  "name": "Hangman",
   "icons": [
     {
     "src": "./hangman-128x128.png",
