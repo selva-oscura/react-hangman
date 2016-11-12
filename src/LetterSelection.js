@@ -1,10 +1,13 @@
 import React from 'react';
 import './Letter.css';
 
-const LetterSelection = ({availableLetter, selectLetter}) => {
+const LetterSelection = ({availableLetter, selectLetter, i, lettersCount}) => {
+	let color = Math.floor(((i%9)/9)*360);
 	let classParams;
+	let style;
 	if(availableLetter.available){
 		classParams = "letter";
+		style={color: `hsl(${color}, 100%, 66%)`};
 	}else{
 		classParams = "letter unavailable";
 	}
@@ -15,7 +18,9 @@ const LetterSelection = ({availableLetter, selectLetter}) => {
 				selectLetter(availableLetter);
 			}
 		}>
-			<h4>{availableLetter.letter}</h4>
+			<h4 style={style}>
+				{availableLetter.letter}
+			</h4>
 		</div>
 	)
 }

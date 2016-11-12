@@ -3,10 +3,13 @@ import LetterSelection from './LetterSelection';
 import './LettersSelection.css';
 
 const LettersSelection = ({availableLetters, selectLetter}) => {
-	let letters = availableLetters.map((availableLetter) => (
+	const lettersCount = availableLetters.length;
+	const letters = availableLetters.map((availableLetter, i) => (
 		<LetterSelection 
 			availableLetter={availableLetter}
 			selectLetter={selectLetter} 
+			i={i}
+			lettersCount={lettersCount}
 		/>
 	));
 	return(
@@ -17,4 +20,3 @@ const LettersSelection = ({availableLetters, selectLetter}) => {
 }
 
 export default LettersSelection;
-
