@@ -9,13 +9,9 @@ import Interactions from './Interactions';
 
 const App = React.createClass({
   getInitialState(){
-    // let local = localStorage;
-    // console.log('localStorage', local);
     let hangmanAppData = localStorage.hangmanAppData;
-    // console.log('hangmanAppData present?', hangmanAppData);
     if(hangmanAppData){
       hangmanAppData = JSON.parse(hangmanAppData);
-      // console.log('hangmanAppData post parsing', hangmanAppData);
       return hangmanAppData;
     }else{    
       const randomWord = Math.floor(Math.random()*data.words.length);
@@ -27,7 +23,6 @@ const App = React.createClass({
           available: true
         });
       }
-      // console.log(data.words[randomWord]);
       return {
         scores:{
           hangman:0,
@@ -45,7 +40,6 @@ const App = React.createClass({
     }
   },
   selectLetter(letter){
-    console.log('letter', letter);
     let state = this.state;
     state.lastPicked=letter.letter;
     if(!letter.available){
@@ -100,7 +94,6 @@ const App = React.createClass({
       });
     }
     const randomWord = Math.floor(Math.random()*data.words.length);
-    // console.log(data.words[randomWord]);
     state.word = data.words[randomWord];
     state.lettersPicked = [];
     state.message = "start";
@@ -108,10 +101,31 @@ const App = React.createClass({
     state.wrongLetters = 0;
     state.lastPicked = "";
     state.availableLetters=letters;
-    console.log('state from newGame', state);
     this.setState(state);
     let hangmanAppData = JSON.stringify(state);
     localStorage.hangmanAppData = hangmanAppData;
+  },
+  processKeyInput(keyCode){
+    let state = this.state;
+    if(state.displayLetterForm){
+      if(keyCode>=65 && keyCode<=90){
+        this.selectLetter(state.availableLetters[keyCode-65]);
+      }else{
+        state.message = "letters-only";
+        this.setState(state);
+      }
+    }else{
+      if(keyCode===32 || keyCode===13){
+        this.newGame();
+      }
+    }
+  },
+  componentDidMount(){
+    window
+      .addEventListener('keyup', (e) => {
+        var keyCode = (window.Event) ? e.which : e.keyCode;
+        this.processKeyInput(keyCode);
+      });
   },
   render() {
     return (
