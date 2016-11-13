@@ -27,12 +27,29 @@
   float:right;
   text-align:right;
 }
+  .tiny-hide{
+    display: inline;
+  }
+  .tiny-show{
+    display: none;
+  }
+
+
 
 @media (max-width: 560px){
+  .header{
+    height: 20vh;
+  }
   .header h2{
     font-size: 2.5vh;
   }
   .header h3, .header h4{
     font-size: 1.7vh;
+  }
+  .tiny-hide{
+    display: none;
+  }
+  .tiny-show{
+    display: inline;
   }
 }
