@@ -78,11 +78,11 @@ const Gallows = ({wrongLetters, message}) => {
 					<line x1="79.5%" y1="57%" x2="70%" y2="57%" stroke="orange" strokeWidth="6" />
 					<line x1="79.5%" y1="43%" x2="79%" y2="78%" stroke="yellow" strokeWidth="6" />
 					<circle cx="79.5%" cy="35%" r="8%" stroke="black" strokeWidth="6" />
-					<circle cx="79.5%" cy="36%" r="5%" stroke="red" strokeWidth="6" />
+					<circle cx="79.5%" cy="36%" r="4%" stroke="red" strokeWidth="4" />
 					<rect width="20%" height="15%" x="69%" y="22%" stroke="black" fill="black" />
 					<circle cx="79.5%" cy="35%" r="8%" stroke="red" strokeWidth="6" fill="transparent" />
-					<circle cx="77.5%" cy="33%" r="1.5%" stroke="red" strokeWidth="6" />
-					<circle cx="81.5%" cy="33%" r="1.5%" stroke="red" strokeWidth="6" />
+					<circle cx="77.5%" cy="33%" r="1.5%" stroke="red" strokeWidth="4" />
+					<circle cx="81.5%" cy="33%" r="1.5%" stroke="red" strokeWidth="4" />
 				</g>
 			);
 			break;		
