@@ -77,9 +77,10 @@ const Gallows = ({wrongLetters, message}) => {
 					<line x1="79.5%" y1="57%" x2="89%" y2="57%" stroke="orange" strokeWidth="6" />
 					<line x1="79.5%" y1="57%" x2="70%" y2="57%" stroke="orange" strokeWidth="6" />
 					<line x1="79.5%" y1="43%" x2="79%" y2="78%" stroke="yellow" strokeWidth="6" />
-					<circle cx="79.5%" cy="35%" r="8%" stroke="red" strokeWidth="6" />
+					<circle cx="79.5%" cy="35%" r="8%" stroke="black" strokeWidth="6" />
 					<circle cx="79.5%" cy="36%" r="5%" stroke="red" strokeWidth="6" />
-					<rect width="9%" height="10%" x="75%" y="28%" stroke="black" fill="black" />
+					<rect width="20%" height="15%" x="69%" y="22%" stroke="black" fill="black" />
+					<circle cx="79.5%" cy="35%" r="8%" stroke="red" strokeWidth="6" fill="transparent" />
 					<circle cx="77.5%" cy="33%" r="1.5%" stroke="red" strokeWidth="6" />
 					<circle cx="81.5%" cy="33%" r="1.5%" stroke="red" strokeWidth="6" />
 				</g>
@@ -94,8 +95,8 @@ const Gallows = ({wrongLetters, message}) => {
 	return (
 		<div className="gallows">
 			<svg xmlns="http://www.w3.org/svg/2000">
-				<rect width="30%" height="98%" x="30%" y="2%" stroke="white" fill="white" />
-				<rect width="28%" height="96%" x="31%" y="4%" stroke="black" fill="black" />
+				<rect width="30%" height="99%" x="30%" y="1%" stroke="white" fill="white" />
+				<rect width="28%" height="97%" x="31%" y="3%" stroke="black" fill="black" />
 				<rect width="6%" height="85%" x="55%" y="15%" stroke="black" fill="black" />
 				<line x1="15%" y1="100%" x2="45%" y2="100%" strokeWidth="30" stroke="white" />
 				{hangedMan}
