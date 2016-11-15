@@ -1,4 +1,5 @@
 import React from 'react';
+import './DifficultyLevelButton.css';
 
 const DifficultyLevelButton = ({level, currentDifficultyLevel, updateDifficultyLevel}) => {
 	var classParams;
