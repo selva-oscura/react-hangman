@@ -1,4 +1,5 @@
 import React from 'react';
+import './DifficultyLevel.css';
 import DifficultyLevelButton from './DifficultyLevelButton';
 
 const DifficultyLevel = ({difficultyLevel, updateDifficultyLevel}) => {
@@ -13,9 +14,9 @@ const DifficultyLevel = ({difficultyLevel, updateDifficultyLevel}) => {
 	));
 	return(
 		<div className="difficultyLevel">
-			<p>
+			<h4>
 				Select Level:
-			</p>
+			</h4>
 			{buttons}
 		</div>
 	)
