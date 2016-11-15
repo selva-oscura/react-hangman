@@ -15,7 +15,7 @@ const DifficultyLevelButton = ({level, currentDifficultyLevel, updateDifficultyL
 				updateDifficultyLevel(level)
 			}
 		}>
-			{level}
+			<h4>{level}</h4>
 		</button>
 	)
 };
