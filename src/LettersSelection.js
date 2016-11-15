@@ -6,6 +6,7 @@ const LettersSelection = ({availableLetters, selectLetter}) => {
 	const lettersCount = availableLetters.length;
 	const letters = availableLetters.map((availableLetter, i) => (
 		<LetterSelection 
+			key={i}
 			availableLetter={availableLetter}
 			selectLetter={selectLetter} 
 			i={i}
