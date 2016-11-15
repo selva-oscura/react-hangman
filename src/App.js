@@ -3,6 +3,7 @@ import './App.css';
 import data from '../public/words.json';
 import Gallows from './Gallows';
 import Header from './Header';
+import DifficultyLevel from './DifficultyLevel';
 import LettersPicked from './LettersPicked';
 import Word from './Word';
 import Interactions from './Interactions';
@@ -34,10 +35,20 @@ const App = React.createClass({
         lastPicked: "",
         wrongLetters: 0,
         message:"start",
-        maxWrong: 6,
+        difficultyLevel: "easy",
+        maxWrong: 10,
         displayLetterForm: true,
       }
     }
+  },
+  difficulty(){
+    return{
+      easy: 10,
+      hard: 6,
+    }
+  },
+  updateDifficultyLevel(level){
+    console.log(level, 'clicked');
   },
   selectLetter(letter){
     let state = this.state;
@@ -136,6 +147,10 @@ const App = React.createClass({
         <Gallows 
           wrongLetters={this.state.wrongLetters}
           message={this.state.message}
+        />
+        <DifficultyLevel 
+          difficultyLevel={this.state.difficultyLevel}
+          updateDifficultyLevel={this.updateDifficultyLevel}
         />
         <LettersPicked  
           lettersPicked={this.state.lettersPicked}
