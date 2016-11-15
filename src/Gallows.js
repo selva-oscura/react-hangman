@@ -1,20 +1,27 @@
 import React from 'react';
 import './Gallows.css';
 
-const Gallows = ({wrongLetters, message}) => {
+const Gallows = ({wrongLetters, difficultyLevel, maxWrong, message}) => {
 	let hangedMan;
-	if(message === "game-won"){
-		wrongLetters = null;
+	let levelAndWrongLetters = difficultyLevel+wrongLetters;
+	if(wrongLetters>=maxWrong){
+		levelAndWrongLetters = difficultyLevel+"-game-lost";
 	}
-	switch(wrongLetters){
-		case 1:
+	if(message === "game-won"){
+		levelAndWrongLetters = null;
+	}
+	switch(levelAndWrongLetters){
+		case "easy1":
+		case "hard1":
 			hangedMan = (
 				<g>
 					<circle cx="59.5%" cy="20%" r="8%" stroke="red" strokeWidth="6" />
 				</g>
 			);
 			break;
-		case 2:
+
+		case "easy2":
+		case "hard2":
 			hangedMan = (
 				<g>
 					<line x1="59.5%" y1="28%" x2="59%" y2="63%" stroke="yellow" strokeWidth="6" />
@@ -22,7 +29,9 @@ const Gallows = ({wrongLetters, message}) => {
 				</g>
 			);
 			break;
-		case 3:
+
+		case "easy3":
+		case "hard3":
 			hangedMan = (
 				<g>
 					<line x1="59.5%" y1="42%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
@@ -31,7 +40,156 @@ const Gallows = ({wrongLetters, message}) => {
 				</g>
 			);
 			break;
-		case 4:
+
+		case "easy4":
+			hangedMan = (
+				<g>
+					<line x1="59.5%" y1="42%" x2="46%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="50%" y1="36%" x2="50%" y2="48%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="38%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="46%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="28%" x2="59%" y2="63%" stroke="yellow" strokeWidth="6" />
+					<circle cx="59.5%" cy="20%" r="8%" stroke="red" strokeWidth="6" />					
+				</g>
+			);
+			break;
+
+		case "easy5":
+			hangedMan = (
+				<g>
+					<line x1="59.5%" y1="42%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="42%" x2="46%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="50%" y1="36%" x2="50%" y2="48%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="38%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="46%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />					
+					<line x1="59.5%" y1="28%" x2="59%" y2="63%" stroke="yellow" strokeWidth="6" />
+					<circle cx="59.5%" cy="20%" r="8%" stroke="red" strokeWidth="6" />					
+				</g>
+			);
+			break;
+
+		case "easy6":
+			hangedMan = (
+				<g>
+					<line x1="59.5%" y1="42%" x2="73%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="69%" y1="36%" x2="69%" y2="48%" stroke="orange" strokeWidth="6" />
+					<line x1="72%" y1="38%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="72%" y1="46%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="42%" x2="46%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="50%" y1="36%" x2="50%" y2="48%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="38%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="46%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="28%" x2="59%" y2="63%" stroke="yellow" strokeWidth="6" />
+					<circle cx="59.5%" cy="20%" r="8%" stroke="red" strokeWidth="6" />					
+				</g>
+			);
+			break;
+
+		case "easy7":
+			hangedMan = (
+				<g>
+					<line x1="59%" y1="63%" x2="50%" y2="85%" stroke="green" strokeWidth="6" />
+					<line x1="59.5%" y1="42%" x2="73%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="69%" y1="36%" x2="69%" y2="48%" stroke="orange" strokeWidth="6" />
+					<line x1="72%" y1="38%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="72%" y1="46%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="42%" x2="46%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="50%" y1="36%" x2="50%" y2="48%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="38%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="46%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="28%" x2="59%" y2="63%" stroke="yellow" strokeWidth="6" />
+					<circle cx="59.5%" cy="20%" r="8%" stroke="red" strokeWidth="6" />					
+				</g>
+			);
+			break;
+
+		case "easy8":
+			hangedMan = (
+				<g>
+					<line x1="59%" y1="63%" x2="50%" y2="85%" stroke="green" strokeWidth="6" />
+					<line x1="45%" y1="78%" x2="50%" y2="85%" stroke="blue" strokeWidth="6" />
+					<line x1="59.5%" y1="42%" x2="73%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="69%" y1="36%" x2="69%" y2="48%" stroke="orange" strokeWidth="6" />
+					<line x1="72%" y1="38%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="72%" y1="46%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="42%" x2="46%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="50%" y1="36%" x2="50%" y2="48%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="38%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="46%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="28%" x2="59%" y2="63%" stroke="yellow" strokeWidth="6" />
+					<circle cx="59.5%" cy="20%" r="8%" stroke="red" strokeWidth="6" />					
+				</g>
+			);
+			break;
+
+		case "easy9":
+			hangedMan = (
+				<g>
+					<line x1="59%" y1="63%" x2="69%" y2="85%" stroke="green" strokeWidth="6" />
+					<line x1="59%" y1="63%" x2="50%" y2="85%" stroke="green" strokeWidth="6" />
+					<line x1="45%" y1="78%" x2="50%" y2="85%" stroke="blue" strokeWidth="6" />
+					<line x1="59.5%" y1="42%" x2="73%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="69%" y1="36%" x2="69%" y2="48%" stroke="orange" strokeWidth="6" />
+					<line x1="72%" y1="38%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="72%" y1="46%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="42%" x2="46%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="50%" y1="36%" x2="50%" y2="48%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="38%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="46%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="28%" x2="59%" y2="63%" stroke="yellow" strokeWidth="6" />
+					<circle cx="59.5%" cy="20%" r="8%" stroke="red" strokeWidth="6" />					
+				</g>
+			);
+			break;
+
+		case "easy10":
+			hangedMan = (
+				<g>
+					<line x1="59%" y1="63%" x2="69%" y2="85%" stroke="green" strokeWidth="6" />
+					<line x1="74%" y1="78%" x2="69%" y2="85%" stroke="blue" strokeWidth="6" />
+					<line x1="59%" y1="63%" x2="50%" y2="85%" stroke="green" strokeWidth="6" />
+					<line x1="45%" y1="78%" x2="50%" y2="85%" stroke="blue" strokeWidth="6" />
+					<line x1="59.5%" y1="42%" x2="73%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="69%" y1="36%" x2="69%" y2="48%" stroke="orange" strokeWidth="6" />
+					<line x1="72%" y1="38%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="72%" y1="46%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="42%" x2="46%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="50%" y1="36%" x2="50%" y2="48%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="38%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="46%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="28%" x2="59%" y2="63%" stroke="yellow" strokeWidth="6" />
+					<circle cx="59.5%" cy="20%" r="8%" stroke="red" strokeWidth="6" />					
+				</g>
+			);
+			break;
+
+		case "easy-game-lost":
+			hangedMan = (
+				<g>
+					<line x1="59%" y1="63%" x2="69%" y2="85%" stroke="green" strokeWidth="6" />
+					<line x1="74%" y1="78%" x2="69%" y2="85%" stroke="blue" strokeWidth="6" />
+					<line x1="59%" y1="63%" x2="50%" y2="85%" stroke="green" strokeWidth="6" />
+					<line x1="45%" y1="78%" x2="50%" y2="85%" stroke="blue" strokeWidth="6" />
+					<line x1="59.5%" y1="42%" x2="73%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="69%" y1="36%" x2="69%" y2="48%" stroke="orange" strokeWidth="6" />
+					<line x1="72%" y1="38%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="72%" y1="46%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="42%" x2="46%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="50%" y1="36%" x2="50%" y2="48%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="38%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="47%" y1="46%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="28%" x2="59%" y2="63%" stroke="yellow" strokeWidth="6" />
+					<circle cx="59.5%" cy="20%" r="8%" stroke="red" strokeWidth="6" />					
+					<line x1="58%" y1="18%" x2="56%" y2="15%" stroke="red" strokeWidth="6" />
+					<line x1="56%" y1="18%" x2="58%" y2="15%" stroke="red" strokeWidth="6" />
+					<line x1="63%" y1="18%" x2="61%" y2="15%" stroke="red" strokeWidth="6" />
+					<line x1="61%" y1="18%" x2="63%" y2="15%" stroke="red" strokeWidth="6" />
+					<line x1="56%" y1="24%" x2="63%" y2="24%" stroke="red" strokeWidth="6" />
+				</g>
+			);
+			break;
+		
+		case "hard4":
 			hangedMan = (
 				<g>
 					<line x1="59.5%" y1="42%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
@@ -41,7 +199,8 @@ const Gallows = ({wrongLetters, message}) => {
 				</g>
 			);
 			break;
-		case 5:
+
+		case "hard5":
 			hangedMan = (
 				<g>
 					<line x1="59%" y1="63%" x2="50%" y2="85%" stroke="green" strokeWidth="6" />
@@ -52,7 +211,21 @@ const Gallows = ({wrongLetters, message}) => {
 				</g>
 			);
 			break;
-		case 6:
+
+		case "hard6":
+			hangedMan = (
+				<g>
+					<line x1="59%" y1="63%" x2="69%" y2="85%" stroke="green" strokeWidth="6" />
+					<line x1="59%" y1="63%" x2="50%" y2="85%" stroke="green" strokeWidth="6" />
+					<line x1="59.5%" y1="42%" x2="69%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="42%" x2="50%" y2="42%" stroke="orange" strokeWidth="6" />
+					<line x1="59.5%" y1="28%" x2="59%" y2="63%" stroke="yellow" strokeWidth="6" />
+					<circle cx="59.5%" cy="20%" r="8%" stroke="red" strokeWidth="6" />
+				</g>
+			);
+			break;
+
+		case "hard-game-lost":
 			hangedMan = (
 				<g>
 					<line x1="59%" y1="63%" x2="69%" y2="85%" stroke="green" strokeWidth="6" />
@@ -69,6 +242,7 @@ const Gallows = ({wrongLetters, message}) => {
 				</g>
 			);
 			break;
+
 		case null:
 			hangedMan = (
 				<g>
