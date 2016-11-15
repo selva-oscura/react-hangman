@@ -1,18 +1,7 @@
-.difficultyLevel{
-  padding-top: 1vh;
-  vertical-align: bottom;
-}
-
-@media (max-width: 560px){
-  .difficultyLevel p{
-    font-size: 1.7vh;
-  }
-}
-
 .difficultyLevel button{
   background-color:transparent;
   color: #eeeeee;
-  /*width: 50%;*/
+  width: 50%;
   padding:1.5vh;
   font-size: 1.5vh;
   margin: 0 2vh 0.5vh 0;
@@ -29,17 +18,3 @@
   background-color:#333333;
   box-shadow: 0vh .5vh .5vh grey;
 }
-
-@media (orientation: landscape){
-  .difficultyLevel{
-    float:right;
-    width: 50vw;
-  }
-}
-
-@media (orientation: portrait){
-  .difficultyLevel{
-    width: 100vw;
-  }
-}
-
