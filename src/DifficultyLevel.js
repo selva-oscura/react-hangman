@@ -7,7 +7,7 @@ const DifficultyLevel = ({difficultyLevel, updateDifficultyLevel}) => {
 		<DifficultyLevelButton  
 			key={i}
 			level={level}
-			stateDifficultyLevel={difficultyLevel}
+			currentDifficultyLevel={difficultyLevel}
 			updateDifficultyLevel={updateDifficultyLevel}
 		/>
 	));
