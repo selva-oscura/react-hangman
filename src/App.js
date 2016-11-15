@@ -43,12 +43,16 @@ const App = React.createClass({
   },
   difficulty(){
     return{
-      easy: 10,
-      hard: 6,
+      easy: 11,
+      hard: 7,
     }
   },
   updateDifficultyLevel(level){
-    console.log(level, 'clicked');
+    let state = this.state;
+    let difficulty = this.difficulty();
+    state.difficultyLevel = level;
+    state.maxWrong = difficulty[level];
+    this.setState(state);
   },
   selectLetter(letter){
     let state = this.state;
@@ -132,11 +136,10 @@ const App = React.createClass({
     }
   },
   componentDidMount(){
-    window
-      .addEventListener('keyup', (e) => {
-        var keyCode = (window.Event) ? e.which : e.keyCode;
-        this.processKeyInput(keyCode);
-      });
+    window.addEventListener('keyup', (e) => {
+      var keyCode = (window.Event) ? e.which : e.keyCode;
+      this.processKeyInput(keyCode);
+    });
   },
   render() {
     return (
@@ -146,6 +149,8 @@ const App = React.createClass({
         />
         <Gallows 
           wrongLetters={this.state.wrongLetters}
+          difficultyLevel={this.state.difficultyLevel}
+          maxWrong={this.state.maxWrong}
           message={this.state.message}
         />
         <DifficultyLevel 
