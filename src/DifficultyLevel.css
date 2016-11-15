@@ -1,0 +1,23 @@
+.difficultyLevel{
+  padding: 2vh;
+  text-align: left;
+}
+
+.difficultyLevel h4{
+  font-size: 2vh;
+  text-transform: capitalize;
+}
+
+@media (orientation: landscape){
+  .difficultyLevel{
+    float:right;
+    width: 50vw;
+  }
+}
+
+@media (orientation: portrait){
+  .difficultyLevel{
+    width: 100vw;
+  }
+}
+
