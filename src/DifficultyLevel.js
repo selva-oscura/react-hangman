@@ -17,7 +17,9 @@ const DifficultyLevel = ({difficultyLevel, updateDifficultyLevel}) => {
 			<h4>
 				Select Level:
 			</h4>
-			{buttons}
+			<div className="difficultyLevelButtons">
+				{buttons}
+			</div>
 		</div>
 	)
 }
