@@ -14,7 +14,7 @@ const App = React.createClass({
     if(hangmanAppData){
       hangmanAppData = JSON.parse(hangmanAppData);
       return hangmanAppData;
-    }else{    
+    }else{
       const randomWord = Math.floor(Math.random()*data.words.length);
       let letters = [];
       for(let i = 97; i<=122; i++){
@@ -159,6 +159,7 @@ const App = React.createClass({
         />
         <LettersPicked  
           lettersPicked={this.state.lettersPicked}
+          word={this.state.word}
         />        
         <Word 
           word={this.state.word}

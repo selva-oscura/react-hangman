@@ -10,12 +10,14 @@
 
 @media (orientation: landscape){
   .lettersPicked{
+    height: 6vh;
     width: 50vw;
   }
 }
 
 @media (orientation: portrait){
   .lettersPicked{
+    height: 4vh;
     width: 100vw;
   }
 }
