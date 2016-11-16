@@ -16,10 +16,10 @@ const Message = ({message, word, lastPicked}) => {
 			message = <h4>{lastPicked} already picked.  Please pick a new letter.</h4>
 			break;
 		case 'wrong-pick-again':
-			message = <h4>Eep! {lastPicked} isn&lsquo;t in the word.  Please pick a new letter.</h4>;
+			message = <h4>Eep! {lastPicked} isn&rsquo;t in the word.  Please pick a new letter.</h4>;
 			break;
 		case 'game-lost':
-			message = <h4>Erk... {lastPicked} wasn't in the word.<br />Game over.  The word was {word}. New Game?</h4>;
+			message = <h4>Erk... {lastPicked} wasn&rsquo;t in the word.<br />Game over.  The word was {word}. New Game?</h4>;
 			break;
 		case 'game-won':
 			message = <h4>Congratulations! You won!<br />New Game?</h4>;
