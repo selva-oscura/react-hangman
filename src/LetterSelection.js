@@ -25,5 +25,4 @@ const LetterSelection = ({availableLetter, selectLetter, i, lettersCount}) => {
 	)
 }
 
-
 export default LetterSelection;
