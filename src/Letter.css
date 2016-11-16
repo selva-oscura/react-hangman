@@ -6,16 +6,24 @@
   text-transform: capitalize;
 }
 
+.correct{
+  color: green;
+}
+
+.incorrect{
+  color: red;
+}
+
 .unavailable h4{
+  color: silver;
   text-decoration: line-through;
-  opacity: .50;
 }
 
 @media (orientation: landscape){
   .letter{
     height: 3vh;
     width: 2vw;
-    margin: 0vw 1vw 1vw 1vw;
+    margin: 0vw .75vw 1vw .75vw;
   }
 }
 
