@@ -1,6 +1,5 @@
 .word{
   background-color: black;
-  height: 9vh;
   padding-top: 2vh;
 }
 
@@ -14,11 +13,13 @@
   .word{
     float:right;
     width: 50vw;
+    height: 9vh;
   }
 }
 
 @media (orientation: portrait){
   .word{
     width: 100vw;
+    height: 6vh;
   }
 }
