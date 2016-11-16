@@ -4,9 +4,9 @@ import './DifficultyLevelButton.css';
 const DifficultyLevelButton = ({level, currentDifficultyLevel, updateDifficultyLevel}) => {
 	var classParams;
 	if(level===currentDifficultyLevel){
-		classParams = "difficultyLevel selected";
+		classParams = "difficultyLevelButton selected";
 	}else{
-		classParams = "difficultyLevel";
+		classParams = "difficultyLevelButton";
 	}
 	return (
 		<button 

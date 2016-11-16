@@ -1,6 +1,7 @@
 .difficultyLevel{
   padding: 2vh;
   text-align: left;
+  height: 12vh;
 }
 
 .difficultyLevel h4{
@@ -16,6 +17,7 @@
   .difficultyLevel{
     float:right;
     width: 50vw;
+
   }
 }
 

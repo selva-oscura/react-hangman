@@ -1,4 +1,4 @@
-.difficultyLevel button{
+.difficultyLevelButtons button{
   background-color:transparent;
   color: #eeeeee;
   width: 45%;
@@ -8,20 +8,20 @@
   box-shadow: 0vh .5vh .5vh grey;
   transition: all .5s;
 }
-.difficultyLevel button:first-child{
+.difficultyLevelButtons button:first-child{
   margin-right: 10%;
 }
 
-.difficultyLevel button:hover{
+.difficultyLevelButtons button:hover{
   background-color:#333333;
   box-shadow: 0vh .5vh .5vh silver;
 }
 
-.difficultyLevel button.selected{
+.difficultyLevelButtons button.selected{
   background-color:#666666;
 }
 
-.difficultyLevel button h4{
+.difficultyLevelButtons button h4{
   background-color: transparent;
   text-align: center;
 }
