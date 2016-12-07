@@ -13,6 +13,10 @@
   .message{
     width: 40vw;
   }
+  .message h4{
+    width: 28vw;
+    float:left;
+  }
 }
 
 @media (orientation: portrait){
