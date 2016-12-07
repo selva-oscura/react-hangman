@@ -34,7 +34,7 @@ const App = React.createClass({
         lettersPicked: [],
         lastPicked: "",
         wrongLetters: 0,
-        message:"start",
+        message:"select-level",
         difficultyLevel: "easy",
         maxWrong: 10,
         displayLetterForm: true,
@@ -52,6 +52,7 @@ const App = React.createClass({
     let difficulty = this.difficulty();
     state.difficultyLevel = level;
     state.maxWrong = difficulty[level];
+    state.message = "start";
     this.setState(state);
   },
   selectLetter(letter){
@@ -111,7 +112,7 @@ const App = React.createClass({
     const randomWord = Math.floor(Math.random()*data.words.length);
     state.word = data.words[randomWord];
     state.lettersPicked = [];
-    state.message = "start";
+    state.message = "select-level";
     state.displayLetterForm = true;
     state.wrongLetters = 0;
     state.lastPicked = "";
@@ -142,6 +143,16 @@ const App = React.createClass({
     });
   },
   render() {
+    let state = this.state;
+    let displayDifficultyLevel;
+    if(state.message==="select-level"){
+      displayDifficultyLevel = (
+        <DifficultyLevel 
+          difficultyLevel={this.state.difficultyLevel}
+          updateDifficultyLevel={this.updateDifficultyLevel}
+        />
+      );
+    }
     return (
       <div className="App">
         <Header 
@@ -153,10 +164,7 @@ const App = React.createClass({
           maxWrong={this.state.maxWrong}
           message={this.state.message}
         />
-        <DifficultyLevel 
-          difficultyLevel={this.state.difficultyLevel}
-          updateDifficultyLevel={this.updateDifficultyLevel}
-        />
+        {displayDifficultyLevel}
         <LettersPicked  
           lettersPicked={this.state.lettersPicked}
           word={this.state.word}
