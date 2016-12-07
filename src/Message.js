@@ -3,6 +3,9 @@ import './Message.css';
 
 const Message = ({message, word, lastPicked}) => {
 	switch(message){
+		case 'select-level':
+			message = <h4>Please Select Game Level.</h4>;
+			break;
 		case 'start':
 			message = <h4>Please pick a letter.</h4>;
 			break;		
