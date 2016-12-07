@@ -37,7 +37,7 @@ const App = React.createClass({
         message:"select-level",
         difficultyLevel: "easy",
         maxWrong: 10,
-        displayLetterForm: true,
+        displayLetterForm: false,
       }
     }
   },
@@ -53,6 +53,7 @@ const App = React.createClass({
     state.difficultyLevel = level;
     state.maxWrong = difficulty[level];
     state.message = "start";
+    state.displayLetterForm = true;
     this.setState(state);
   },
   selectLetter(letter){
@@ -113,7 +114,6 @@ const App = React.createClass({
     state.word = data.words[randomWord];
     state.lettersPicked = [];
     state.message = "select-level";
-    state.displayLetterForm = true;
     state.wrongLetters = 0;
     state.lastPicked = "";
     state.availableLetters=letters;
@@ -138,19 +138,33 @@ const App = React.createClass({
   },
   componentDidMount(){
     window.addEventListener('keyup', (e) => {
+      console.log('keycode', e.keyCode);
       var keyCode = (window.Event) ? e.which : e.keyCode;
       this.processKeyInput(keyCode);
     });
   },
   render() {
     let state = this.state;
-    let displayDifficultyLevel;
+    let displayDifficultyLevelOrGame;
     if(state.message==="select-level"){
-      displayDifficultyLevel = (
+      displayDifficultyLevelOrGame = (
         <DifficultyLevel 
           difficultyLevel={this.state.difficultyLevel}
           updateDifficultyLevel={this.updateDifficultyLevel}
         />
+      );
+    }else{
+      displayDifficultyLevelOrGame = (
+        <div>
+          <LettersPicked  
+            lettersPicked={this.state.lettersPicked}
+            word={this.state.word}
+          />        
+          <Word 
+            word={this.state.word}
+            lettersPicked={this.state.lettersPicked}
+          />
+        </div>
       );
     }
     return (
@@ -164,15 +178,7 @@ const App = React.createClass({
           maxWrong={this.state.maxWrong}
           message={this.state.message}
         />
-        {displayDifficultyLevel}
-        <LettersPicked  
-          lettersPicked={this.state.lettersPicked}
-          word={this.state.word}
-        />        
-        <Word 
-          word={this.state.word}
-          lettersPicked={this.state.lettersPicked}
-        />
+        {displayDifficultyLevelOrGame}
         <Interactions 
           message={this.state.message}
           word={this.state.word}

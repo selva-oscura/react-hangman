@@ -2,24 +2,18 @@ import React from 'react';
 import './Interactions.css';
 import Message from './Message';
 import LettersSelection from './LettersSelection';
-import NewGame from './NewGame';
 
 
 const Interactions = ({message, word, lastPicked, availableLetters, selectLetter, displayLetterForm, newGame}) => {
-	let userResponse;
+	let displayLetters;
+	console.log('displayLetterForm', displayLetterForm)
 	if(displayLetterForm){
-		userResponse = (
+		displayLetters = (
 			<LettersSelection 
 				availableLetters={availableLetters}
 				selectLetter={selectLetter}
 			/>
 		);
-	}else{
-		userResponse = (
-			<NewGame 
-				newGame={newGame}
-			/>
-		)
 	}
 	return(
 		<div className="interactions">
@@ -27,8 +21,9 @@ const Interactions = ({message, word, lastPicked, availableLetters, selectLetter
 				message={message} 
 				word={word}
 				lastPicked={lastPicked}
+				newGame={newGame}
 			/>
-			{userResponse}
+			{displayLetters}
 		</div>
 	)
 };

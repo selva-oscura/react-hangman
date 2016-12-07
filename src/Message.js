@@ -1,7 +1,8 @@
 import React from 'react';
+import NewGame from './NewGame';
 import './Message.css';
 
-const Message = ({message, word, lastPicked}) => {
+const Message = ({message, word, lastPicked, newGame}) => {
 	switch(message){
 		case 'select-level':
 			message = <h4>Please Select Game Level.</h4>;
@@ -22,13 +23,28 @@ const Message = ({message, word, lastPicked}) => {
 			message = <h4>Eep! {lastPicked} isn&rsquo;t in the word.  Please pick a new letter.</h4>;
 			break;
 		case 'game-lost':
-			message = <h4>Erk... {lastPicked} wasn&rsquo;t in the word.<br />Game over.  The word was {word}. New Game?</h4>;
+			message = (
+				<div>
+					<h4>Erk... {lastPicked} wasn&rsquo;t in the word.<br />Game over.  The word was {word}. New Game?</h4>
+					<NewGame 
+							newGame={newGame}
+						/>
+				</div>
+			);
 			break;
 		case 'game-won':
-			message = <h4>Congratulations! You won!<br />New Game?</h4>;
+			message = (
+				<div>
+					<h4>Congratulations! You won!<br />New Game?
+					</h4>
+					<NewGame 
+						newGame={newGame}
+					/>
+				</div>
+			);
 			break;
 		default:
-			message = <h4>Hmmm....  Default message hit....  Erk....</h4>;
+			message = <h4>Hmmm....  Default message hit....  Erk....</h4>
 			break;
 	}
 	return (
