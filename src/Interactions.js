@@ -6,7 +6,6 @@ import LettersSelection from './LettersSelection';
 
 const Interactions = ({message, word, lastPicked, availableLetters, selectLetter, displayLetterForm, newGame}) => {
 	let displayLetters;
-	console.log('displayLetterForm', displayLetterForm)
 	if(displayLetterForm){
 		displayLetters = (
 			<LettersSelection 
