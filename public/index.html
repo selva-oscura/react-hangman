@@ -3,33 +3,39 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="shortcut icon" href="./favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Artifika|Lato" rel="stylesheet">
     <!-- add manifest -->
-    <link rel="manifest" href="../manifest.json">
+    <link rel="manifest" href="./manifest.json">
+    <!-- Add to home screen for Safari on iOS -->
     <!-- Add to home screen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Hangman PWA">
-    <link rel="apple-touch-icon" href="./public/hangman-152x152.png">
+    <meta name="apple-mobile-web-app-title" content="Hangman">
+    <link rel="apple-touch-icon" href="./hangman-152x152.png">
     <!-- Add tile icon for Windows -->
-    <meta name="msapplication-TileImage" content="./public/hangman-144x144.png">
-    <meta name="msapplication-TileColor" content="#2F3BA2">
-
+    <meta name="msapplication-TileImage" content="./hangman-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
     <title>HANGMAN</title>
   </head>
   <body>
     <div id="root"></div>
-  <script type="text/javascript">  
-    if('serviceWorker' in navigator){
-      navigator.serviceWorker
-        .register('../service-worker.js')
-        .then(function(res) {console.log('Service Worker Registered', res); 
-      }).catch(function(err){
-        console.log('ServiceWorker registration failed', err);
-      });
-    }
-  </script>
+    <noscript>
+      <div>
+        <h2>This site requires JavaScript to function. Please turn on Javascript to access content.</h2>
+        <h3>(This message is only visible on browsers with JavaScript disabled.)</h3>
+      </div>
+    </noscript>
+    <script type="text/javascript">
+      if('serviceWorker' in navigator){
+        navigator.serviceWorker
+          .register('./service-worker.js')
+          .then(function(res) {console.log('Service Worker Registered', res);
+        }).catch(function(err){
+          console.log('ServiceWorker registration failed', err);
+        });
+      }
+    </script>
   </body>
 </html>
- 
