@@ -10,10 +10,10 @@ import Interactions from './Interactions';
 
 const App = React.createClass({
   getInitialState(){
-    let hangmanAppData = localStorage.hangmanAppData;
-    if(hangmanAppData){
-      hangmanAppData = JSON.parse(hangmanAppData);
-      return hangmanAppData;
+    let hangmanData = localStorage.hangmanData;
+    if(hangmanData){
+      hangmanData = JSON.parse(hangmanData);
+      return hangmanData;
     }else{
       const randomWord = Math.floor(Math.random()*data.words.length);
       let letters = [];
@@ -24,7 +24,7 @@ const App = React.createClass({
           available: true
         });
       }
-      return {
+      hangmanData = {
         scores:{
           hangman:0,
           player:0,
@@ -39,6 +39,8 @@ const App = React.createClass({
         maxWrong: 10,
         displayLetterForm: false,
       }
+      localStorage.hangmanData = JSON.stringify(hangmanData);
+      return hangmanData;
     }
   },
   difficulty(){
@@ -72,9 +74,7 @@ const App = React.createClass({
       }
     }
     this.setState(state);
-    let data = state;
-    let hangmanAppData = JSON.stringify(data);
-    localStorage.hangmanAppData = hangmanAppData;
+    localStorage.hangmanData = JSON.stringify(state);
     this.checkGameOver();
   },
   checkGameOver(){
@@ -97,8 +97,7 @@ const App = React.createClass({
       }
     }
     this.setState(state);
-    let hangmanAppData = JSON.stringify(state);
-    localStorage.hangmanAppData = hangmanAppData;
+    localStorage.hangmanData = JSON.stringify(state);
   },
   newGame(){
     let state = this.state;
@@ -118,8 +117,7 @@ const App = React.createClass({
     state.lastPicked = "";
     state.availableLetters=letters;
     this.setState(state);
-    let hangmanAppData = JSON.stringify(state);
-    localStorage.hangmanAppData = hangmanAppData;
+    localStorage.hangmanData = JSON.stringify(state);
   },
   processKeyInput(keyCode){
     let state = this.state;
@@ -129,6 +127,7 @@ const App = React.createClass({
       }else{
         state.message = "letters-only";
         this.setState(state);
+        localStorage.hangmanData = JSON.stringify(state);
       }
     }else{
       if(keyCode===32 || keyCode===13){
@@ -138,7 +137,6 @@ const App = React.createClass({
   },
   componentDidMount(){
     window.addEventListener('keyup', (e) => {
-      console.log('keycode', e.keyCode);
       var keyCode = (window.Event) ? e.which : e.keyCode;
       this.processKeyInput(keyCode);
     });
