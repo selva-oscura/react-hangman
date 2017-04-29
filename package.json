@@ -1,10 +1,30 @@
 {
-  "name": "hangman",
+  "name": "Hangman",
   "version": "0.0.1",
+  "description": "Hangman Progressive Web App, made with node, React, service workers and storage of state in the browser",
+  "homepage": "https://selva-oscura.github.io/hangman",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selva-oscura/react-hangman.git"
+  },
+  "keywords": [
+    "JS",
+    "React",
+    "create-react-app",
+    "PWA",
+    "sw-precache"
+  ],
+  "author": "Carol  St. Louis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/selva-oscura/react-hangman/issues"
+  },
+
   "private": true,
   "devDependencies": {
+    "gh-pages": "^0.12.0",
     "react-scripts": "0.7.0",
-    "sw-precache": "^4.0.0"
+    "sw-precache": "^4.2.2"
   },
   "dependencies": {
     "react": "^15.3.2",
@@ -13,6 +33,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && cp manifest.json build/ && sw-precache --root='build/' --static-file-globs='build/**/!(*map*)'",
+    "deploy" : "npm run build&&gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
