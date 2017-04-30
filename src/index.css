@@ -5,3 +5,29 @@
   overflow:hidden;
   background-color: #000000;
 }
+
+@font-face {
+  font-family: 'Artifika';
+  src: url('./fonts/Artifika-Regular.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/Artifika-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/Artifika-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/Artifika-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/Artifika-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/Lato-Regular.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/Lato-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/Lato-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/Lato-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+h1, h2, h3, h4, input{
+  font-family: 'Artifika', serif;
+  color: #eeeeee;
+}
+p, h5, h6, ul, li{
+  font-family: 'Lato', sans-serif;
+}
