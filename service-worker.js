@@ -9,7 +9,14 @@ const filesToCache = [
 	'./hangman-152x152.png',
 	'./hangman-192x192.png',
 	'./hangman-256x256.png',
-	'./words.json'
+	'./fonts/Artifika-Regular.eot',
+	'./fonts/Artifika-Regular.ttf',
+	'./fonts/Artifika-Regular.woff',
+	'./fonts/Artifika-Regular.woff2',
+	'./fonts/Lato-Regular.eot',
+	'./fonts/Lato-Regular.ttf',
+	'./fonts/Lato-Regular.woff',
+	'./fonts/Lato-Regular.woff2'
 ];
 
 var dataCacheName = 'hangman-appData-v1';
