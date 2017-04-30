@@ -7,6 +7,6 @@ Built as a personal project when learning React and Progressive Web Apps, React-
 	<li>service-workers (<a href="https://github.com/GoogleChrome/sw-precache">sw-precache</a>)</li>
 </ul>
 
-Play it <a href="https://selva-oscura.github.io/hangman">online</a>!
+Play it <a href="https://selva-oscura.github.io/react-hangman">online</a>!
 
 ![Hangman](https://github.com/selva-oscura/react-hangman/blob/master/hangman_screenshot.png)
