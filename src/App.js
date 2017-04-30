@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import data from '../public/words.json';
+import data from './words.json';
 import Gallows from './Gallows';
 import Header from './Header';
 import DifficultyLevel from './DifficultyLevel';
