@@ -1,7 +1,7 @@
 .header{
   width: 100vw;
-  padding: 2vh;
-  height: 16vh;
+  padding: 4vh;
+  height: 20vh;
 }
 
 .header h2{
@@ -36,7 +36,8 @@
 
 @media (orientation: landscape){
   .header{
-    height: 20vh;
+    height: 22vh;
+    margin-bottom:6vh;
   }
 }
 

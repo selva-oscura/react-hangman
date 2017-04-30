@@ -1,5 +1,5 @@
 .message{
-  padding: 2vh;
+  padding: 4vh;
   float:left;
   text-align: left;
 }
@@ -24,7 +24,7 @@
     width: 100vw;
   }
   .message h4{
-    width: 70vw;
+    width: 66vw;
     float:left;
   }
 }
