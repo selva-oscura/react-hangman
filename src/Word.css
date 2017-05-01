@@ -1,9 +1,6 @@
-.word{
-  padding-top: 2vh;
-}
-
 @media (orientation: landscape){
   .word{
+    padding-top: 2vh;
     width: 50vw;
     height: 9vh;
     float: left;
@@ -16,7 +13,8 @@
 
 @media (orientation: portrait){
   .word{
+    padding-top: 1vh;
     width: 100vw;
-    height: 6vh;
+    height: 5vh;
   }
 }

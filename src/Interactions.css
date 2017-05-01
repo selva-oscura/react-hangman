@@ -1,5 +1,4 @@
 .interactions{
-  padding-top: 2vh;
   vertical-align: bottom;
 }
 
@@ -11,6 +10,7 @@
 
 @media (orientation: landscape){
   .interactions{
+    padding-top: 2vh;
     float:left;
     width: 50vw;
   }
@@ -18,6 +18,7 @@
 
 @media (orientation: portrait){
   .interactions{
+    padding-top: 1.5vh;
     width: 100vw;
   }
 }
