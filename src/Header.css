@@ -1,7 +1,6 @@
 .header{
   width: 100%;
   padding-bottom: 2.5vh;
-  height: 20vh;
 }
 
 .header h2{
@@ -41,10 +40,13 @@
   }
 }
 
-@media (max-width: 600px){
+@media (orientation: portrait){
   .header{
-    height: 15vh;
+    height: 16vh;
   }
+}
+
+@media (max-width: 600px){
   .tiny-hide{
     display: none;
   }
