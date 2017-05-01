@@ -7,19 +7,16 @@
 .header h2{
   padding:1vh;
   font-size: 3vh;
-  color: #F9CC9D;
 }
 
 .header h3{
   padding:0vh 1vh 1vh 1vh;
   font-size: 2vh;
-  color: #F9CC9D;
 }
 
 .header h4{
   font-size: 2vh;
   padding:0vh 1vh 1vh 1vh;
-  color: #F9CC9D;
 }
 
 .left{
@@ -48,9 +45,6 @@
   .header{
     height: 15vh;
   }
-/*  .header h3, .header h4{
-    font-size: 1.7vh;
-  }*/
   .tiny-hide{
     display: none;
   }
