@@ -1,14 +1,10 @@
 {
-  "main.css": "static/css/main.2c99be1e.css",
-  "main.css.map": "static/css/main.2c99be1e.css.map",
-  "main.js": "static/js/main.48483e9c.js",
-  "main.js.map": "static/js/main.48483e9c.js.map",
+  "main.css": "static/css/main.ea250661.css",
+  "main.css.map": "static/css/main.ea250661.css.map",
+  "main.js": "static/js/main.8e5f4f9a.js",
+  "main.js.map": "static/js/main.8e5f4f9a.js.map",
   "static/media/Artifika-Regular.eot": "static/media/Artifika-Regular.77245496.eot",
   "static/media/Artifika-Regular.ttf": "static/media/Artifika-Regular.7e81c309.ttf",
   "static/media/Artifika-Regular.woff": "static/media/Artifika-Regular.b22520c8.woff",
-  "static/media/Artifika-Regular.woff2": "static/media/Artifika-Regular.a6ba402c.woff2",
-  "static/media/Lato-Regular.eot": "static/media/Lato-Regular.ae4833c5.eot",
-  "static/media/Lato-Regular.ttf": "static/media/Lato-Regular.3b9b9903.ttf",
-  "static/media/Lato-Regular.woff": "static/media/Lato-Regular.165edd5f.woff",
-  "static/media/Lato-Regular.woff2": "static/media/Lato-Regular.2db09e51.woff2"
+  "static/media/Artifika-Regular.woff2": "static/media/Artifika-Regular.a6ba402c.woff2"
 }
