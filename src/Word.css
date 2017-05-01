@@ -1,12 +1,5 @@
 .word{
   padding-top: 2vh;
-/*  background-color: black;*/
-}
-
-@media (max-width: 560px){
-  .word h4{
-    font-size: 1.7vh;
-  }
 }
 
 @media (orientation: landscape){
@@ -25,31 +18,5 @@
   .word{
     width: 100vw;
     height: 6vh;
-  }
-}
-
-
-
-.lettersPicked{
-  padding-top: 4vh;
-  text-align: left;
-}
-.lettersPicked h4{
-  font-size: 2.5vh;
-  text-transform: capitalize;
-  color: #F9CC9D;;
-}
-
-@media (orientation: landscape){
-  .lettersPicked{
-    height: 11vh;
-    width: 50vw;
-  }
-}
-
-@media (orientation: portrait){
-  .lettersPicked{
-    height: 11vh;
-    width: 96vw;
   }
 }
