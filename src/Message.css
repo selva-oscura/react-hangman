@@ -1,13 +1,12 @@
 .message {
   padding-top: 4vh;
-/*  float:left;*/
+  float:left;
   text-align: left;
 }
 
 .message h4{
   font-size: 2.5vh;
   text-transform: capitalize;
-  color: #F9CC9D;
 }
 
 @media (orientation: landscape){
