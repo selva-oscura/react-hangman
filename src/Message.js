@@ -17,18 +17,18 @@ const Message = ({message, word, lastPicked, newGame}) => {
 			message = <h4>Please pick letters only.</h4>;
 			break;
 		case 'already-picked':
-			message = <h4>{lastPicked.toUpperCase()} already picked.  Please pick a new letter.</h4>
+			message = <h4>{lastPicked.toUpperCase()} already picked.<br />Please pick a new letter.</h4>
 			break;
 		case 'wrong-pick-again':
-			message = <h4>Eep! {lastPicked.toUpperCase()} isn&rsquo;t in the word.  Please pick a new letter.</h4>;
+			message = <h4>Eep! {lastPicked.toUpperCase()} isn&rsquo;t in the word.<br />Please pick a new letter.</h4>;
 			break;
 		case 'game-lost':
 			message = (
 				<div>
 					<h4>Erk... {lastPicked} wasn&rsquo;t in the word.<br />Game over.  The word was {word}. New Game?</h4>
 					<NewGame 
-							newGame={newGame}
-						/>
+						newGame={newGame}
+					/>
 				</div>
 			);
 			break;
