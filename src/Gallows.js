@@ -269,10 +269,10 @@ const Gallows = ({wrongLetters, difficultyLevel, maxWrong, message}) => {
 	return (
 		<div className="gallows">
 			<svg xmlns="http://www.w3.org/svg/2000">
-				<rect width="30%" height="99%" x="30%" y="1%" stroke="white" fill="white" />
+				<rect width="30%" height="99%" x="30%" y="1%" stroke="#F9CC9D" fill="#F9CC9D" />
 				<rect width="28%" height="97%" x="31%" y="3%" stroke="black" fill="black" />
 				<rect width="6%" height="85%" x="55%" y="15%" stroke="black" fill="black" />
-				<line x1="15%" y1="100%" x2="45%" y2="100%" strokeWidth="30" stroke="white" />
+				<line x1="15%" y1="100%" x2="45%" y2="100%" strokeWidth="30" stroke="#F9CC9D" />
 				{hangedMan}
 			</svg>
 		</div>

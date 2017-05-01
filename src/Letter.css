@@ -2,7 +2,7 @@
   display: inline-block;
 }
 .letter h4{
-  font-size: 2vh;
+  font-size: 2.5vh;
   text-transform: capitalize;
 }
 
@@ -20,17 +20,17 @@
 }
 
 @media (orientation: landscape){
-  .letter{
-    height: 3vh;
-    width: 2vw;
+  .letter {
+    height: 4vh;
+    width: 3vw;
     margin: 0vw .75vw 1vw .75vw;
   }
 }
 
 @media (orientation: portrait){
-  .letter{
-    height: 2.5vh;
-    width: 5.5vw;
+  .letter {
+    height: 4vh;
+    width: 6vw;
     margin: 0vw 1vw 1.5vw 1vw;
     text-align: center;
   }

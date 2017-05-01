@@ -1,17 +1,17 @@
 .lettersSelection{
-  padding: 1vh;
+  padding-top: 2vh;
   float:left;
   text-align: left;
 }
 
 .lettersSelection h4{
-  font-size: 2vh;
+  font-size: 3vh;
   text-transform: capitalize;
 }
 
 @media (orientation: landscape){
   .lettersSelection{
-    width: 50vw;
+    width: 46vw;
   }
 }
 

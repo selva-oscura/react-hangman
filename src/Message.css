@@ -1,12 +1,13 @@
-.message{
-  padding: 4vh;
-  float:left;
+.message {
+  padding-top: 4vh;
+/*  float:left;*/
   text-align: left;
 }
 
-.message div h4{
-  font-size: 2vh;
+.message h4{
+  font-size: 2.5vh;
   text-transform: capitalize;
+  color: #F9CC9D;
 }
 
 @media (orientation: landscape){
@@ -14,17 +15,17 @@
     width: 50vw;
   }
   .message h4{
-    width: 28vw;
+    width: 33vw;
     float:left;
   }
 }
 
 @media (orientation: portrait){
   .message{
-    width: 100vw;
+    width: 96vw;
   }
   .message h4{
-    width: 66vw;
+    width: 63vw;
     float:left;
   }
 }

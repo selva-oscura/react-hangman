@@ -1,12 +1,13 @@
 .difficultyLevel{
-  padding: 2vh;
+  padding: 2vh 2vh 2vh 0;
   text-align: left;
   height: 12vh;
 }
 
 .difficultyLevel h4{
-  font-size: 2vh;
+  font-size: 2.5vh;
   text-transform: capitalize;
+  color: #F9CC9D;
 }
 
 .difficultyLevelButtons{
@@ -25,4 +26,3 @@
     width: 100vw;
   }
 }
-

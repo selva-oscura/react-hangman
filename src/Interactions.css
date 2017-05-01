@@ -1,5 +1,5 @@
 .interactions{
-  padding-top: 1vh;
+  padding-top: 2vh;
   vertical-align: bottom;
 }
 
@@ -11,7 +11,7 @@
 
 @media (orientation: landscape){
   .interactions{
-    float:right;
+    float:left;
     width: 50vw;
   }
 }

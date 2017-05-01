@@ -3,31 +3,31 @@
 }
 .newGame button{
   background-color:transparent;
-  color: #eeeeee;
+  color: #F9CC9D;
   padding:1.5vh;
-  font-size: 1.5vh;
+  font-size: 2.5vh;
   margin: 0 2vh 0.5vh 0;
-  border:2px solid white;
-  box-shadow: 0vh .5vh .5vh silver;
+  border:2px solid #F9CC9D;
+  box-shadow: 0vh .5vh .5vh grey;
   transition: all .5s;
   float: right;
 }
 .newGame button:hover{
   background-color:#333333;
-  box-shadow: 0vh .5vh .5vh grey;
+  box-shadow: 0vh .5vh .5vh rgba(249, 204, 157, 0.5);
 }
 
 
 @media (orientation: landscape){
   .newGame{
     float:right;
-    width: 12vw;
+    width: 16vw;
   }
 }
 
 @media (orientation: portrait){
   .newGame{
     float:right;
-    width: 19vw;
+    width: 29vw;
   }
 }

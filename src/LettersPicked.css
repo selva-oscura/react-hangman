@@ -1,23 +1,23 @@
 .lettersPicked{
-  padding: 4vh;
+  padding-top: 4vh;
   text-align: left;
-  float:right;
 }
 .lettersPicked h4{
-  font-size: 2vh;
+  font-size: 2.5vh;
   text-transform: capitalize;
+  color: #F9CC9D;;
 }
 
 @media (orientation: landscape){
   .lettersPicked{
-    height: 8vh;
+    height: 11vh;
     width: 50vw;
   }
 }
 
 @media (orientation: portrait){
   .lettersPicked{
-    height: 4vh;
-    width: 100vw;
+    height: 11vh;
+    width: 96vw;
   }
 }
