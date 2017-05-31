@@ -1,12 +1,12 @@
 @media (orientation: landscape){
   .word{
     padding-top: 2vh;
-    width: 50vw;
+    width: 56vw;
     height: 9vh;
     float: left;
   }
   .word .letter {
-    width: 2.5vw;
+    width: 4.5vh;
     margin: 0 1vw 1vw 0;
   }
 }

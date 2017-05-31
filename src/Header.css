@@ -35,9 +35,26 @@
 
 @media (orientation: landscape){
   .header{
-    height: 22vh;
-    margin-bottom:6vh;
+    height: 23vh;
+    margin-bottom:4vh;
   }
+
+  .header h2{
+    padding:.75vh;
+    font-size: 5.5vh;
+  }
+
+  .header h3{
+    padding:0vh 1vh .5vh 1vh;
+    font-size: 4.5vh;
+  }
+
+  .header h4{
+    font-size: 4vh;
+    padding:0vh 1vh .5vh 1vh;
+  }
+
+
 }
 
 @media (orientation: portrait){

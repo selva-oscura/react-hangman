@@ -11,10 +11,11 @@
 
 @media (orientation: landscape){
   .message{
-    width: 50vw;
+    width: 56vw;
   }
   .message h4{
-    width: 33vw;
+    font-size: 4.5vh;
+    width: 39vw;
     float:left;
   }
 }

@@ -12,7 +12,12 @@
 @media (orientation: landscape){
   .difficultyLevel{
     float:left;
+    height: 15vh;
     width: 50vw;
+  }
+
+  .difficultyLevel h4{
+    font-size: 3.5vh;
   }
 }
 

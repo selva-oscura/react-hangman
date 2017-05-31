@@ -10,7 +10,10 @@
   .lettersPicked{
     padding-top: 4vh;
     height: 11vh;
-    width: 50vw;
+    width: 56vw;
+  }
+  .lettersPicked h4{
+    font-size: 4.5vh;
   }
 }
 
