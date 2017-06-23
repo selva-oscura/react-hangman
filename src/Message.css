@@ -2,6 +2,7 @@
   padding-top: 4vh;
   float:left;
   text-align: left;
+  position:relative;
 }
 
 .message h4{
@@ -15,17 +16,23 @@
   }
   .message h4{
     font-size: 4.5vh;
-    width: 39vw;
+    width: 56vw;
     float:left;
   }
+  .message h4.new-game-prompt{
+    padding-bottom: 12vh;
+    /*width: 39vw;*/
+  }
+
 }
 
 @media (orientation: portrait){
   .message{
     width: 96vw;
+    margin-left:2vw;
   }
   .message h4{
-    width: 63vw;
+    width: 80vw;
     float:left;
   }
 }
