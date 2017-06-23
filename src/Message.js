@@ -11,7 +11,7 @@ const Message = ({message, word, lastPicked, newGame}) => {
 			message = <h4>Please pick a letter.</h4>;
 			break;		
 		case 'pick-letter':
-			message = <h4>Good choice!  Please pick another letter.</h4>;
+			message = <h4>Good choice! Please pick another letter.</h4>;
 			break;
 		case 'letters-only':
 			message = <h4>Please pick letters only.</h4>;
@@ -25,7 +25,7 @@ const Message = ({message, word, lastPicked, newGame}) => {
 		case 'game-lost':
 			message = (
 				<div>
-					<h4>Erk... {lastPicked} wasn&rsquo;t in the word.<br />Game over.  The word was {word}. New Game?</h4>
+					<h4>Erk... {lastPicked} wasn&rsquo;t in the word.<br />Game over. The word was {word}.<br />New Game?</h4>
 					<NewGame 
 						newGame={newGame}
 					/>
@@ -35,7 +35,7 @@ const Message = ({message, word, lastPicked, newGame}) => {
 		case 'game-won':
 			message = (
 				<div>
-					<h4>Congratulations! You won!<br />New Game?
+					<h4>Congratulations! You won!<br />&nbsp;<br />New Game?
 					</h4>
 					<NewGame 
 						newGame={newGame}
