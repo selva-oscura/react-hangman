@@ -21,9 +21,7 @@
   }
   .message h4.new-game-prompt{
     padding-bottom: 12vh;
-    /*width: 39vw;*/
   }
-
 }
 
 @media (orientation: portrait){
