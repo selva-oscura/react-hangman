@@ -33,4 +33,8 @@
     width: 80vw;
     float:left;
   }
+  .message h4.new-game-prompt{
+    width: 72vw;
+  }
+
 }
