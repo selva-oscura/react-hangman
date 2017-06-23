@@ -15,8 +15,8 @@ const filesToCache = [
 	'./fonts/Artifika-Regular.woff2'
 ];
 
-var dataCacheName = 'hangman-appData-v1';
-var cacheName = 'hangman-v1';
+var dataCacheName = 'hangman-appData-v1.1';
+var cacheName = 'hangman-v1.1';
 
 self.addEventListener('install', function(e){
 	console.log('[ServiceWorker] install');

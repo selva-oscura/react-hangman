@@ -1,6 +1,6 @@
 {
   "name": "Hangman",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Hangman Progressive Web App, made with node, React, service workers and storage of state in the browser",
   "homepage": "https://selva-oscura.github.io/react-hangman",
   "repository": {
