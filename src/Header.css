@@ -4,7 +4,7 @@
 }
 
 .header h2{
-  padding:1vh;
+  padding:1vh 0.5vh;
   font-size: 3vh;
 }
 
@@ -36,34 +36,40 @@
 @media (orientation: landscape){
   .header{
     height: 23vh;
-    margin-bottom:4vh;
   }
-
   .header h2{
     padding:.75vh;
-    font-size: 5.5vh;
+    font-size: 5vh;
   }
-
   .header h3{
     padding:0vh 1vh .5vh 1vh;
-    font-size: 4.5vh;
+    font-size: 4vh;
   }
-
   .header h4{
     font-size: 4vh;
     padding:0vh 1vh .5vh 1vh;
   }
-
-
 }
 
 @media (orientation: portrait){
   .header{
-    height: 16vh;
+    height: 18vh;
+  }
+  .header h2{
+    padding:0.5vh;
+    font-size: 3vh;
+  }
+  .header h3{
+    font-size: 2.5vh;
+    padding:0vh 1vh .5vh 1vh;
+  }
+  .header h4{
+    font-size: 2.5vh;
+    padding:0vh 1vh 0vh 1vh;
   }
 }
 
-@media (max-width: 600px){
+@media (min-height: 600px){
   .tiny-hide{
     display: none;
   }
