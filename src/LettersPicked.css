@@ -8,8 +8,8 @@
 
 @media (orientation: landscape){
   .lettersPicked{
-    padding-top: 4vh;
-    height: 11vh;
+    padding-top: 2vh;
+    height: 14vh;
     width: 56vw;
   }
   .lettersPicked h4{
@@ -19,6 +19,7 @@
 
 @media (orientation: portrait){
   .lettersPicked{
+    margin-left:2vw;
     padding-top: 3vh;
     height: 9vh;
     width: 96vw;
