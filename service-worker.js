@@ -1,4 +1,4 @@
-// const VERSION = 1;
+const VERSION = "1.1";
 
 const filesToCache = [
 	'./',
@@ -10,8 +10,8 @@ const filesToCache = [
 	'./fonts/Artifika-Regular.woff2'
 ];
 
-var dataCacheName = 'hangman-appData-v1.1';
-var cacheName = 'hangman-v1.1';
+var dataCacheName = 'hangman-appData-v' + VERSION;
+var cacheName = 'hangman-v' + VERSION;
 
 self.addEventListener('install', function(e){
 	console.log('[ServiceWorker] install');
@@ -28,7 +28,7 @@ self.addEventListener('activate', function(e){
 	e.waitUntil(
 		caches.keys().then(function(keyList){
 			return Promise.all(keyList.map(function(key){
-				if(key !== changeName && key !== dataCacheName){
+				if(key !== cacheName && key !== dataCacheName){
 					console.log('[ServiceWorker] Removing old cache', key);
 					return caches.delete(key);
 				}
